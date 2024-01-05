@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(233, 229, 229);
+    /* font-family: Helvetica, Arial, Lucida, sans-serif; */
+    font-weight: bold;
+    /* font-size: 14px; */
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    background-color: #DB0F00;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+header img {
+    width: 90px;
+    height: 120px;
+    margin: 12px;
+}
+
+header .site-name {
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+.left-section,
+.center-section,
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-right: 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+/* Fin HEADER */
+
+/* Début MAIN */
+
+main .title {
+    padding: 20px;
+    /* height: 400px; 
+    background-image: url('../img/couche_soleil.jpg'); 
+    background-size: cover;
+    background-position: 0% 64%;
+    filter: brightness(0.8); */
+}
+
+main .title h1 {
+    color: #DB0F00;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 0;
+}
+
+main .title img {
+    height: 120px;
+    width: 90px;
+    display: block;
+    margin: auto;
+}
+
+main .content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Carroussel */
+
+/* .swiper {
+    max-width: 800px;
+    aspect-ratio: 16/9;
+} */
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    max-width: 660px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.swiper {
+    --swiper-theme-color: #DB0F00;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+}
+
+.swiper-pagination{
+    position: static;
+    margin-top: 10px;
+}
+
+main .senior h1{
+    color: #DB0F00;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #DB0F00;
+    font-weight: 700;
+    padding: 10px;
+    width: 305px;
+    margin: auto;
+}
