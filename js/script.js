@@ -13,6 +13,10 @@ var swiper = new Swiper(".swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+        delay: 3000, // Temps en millisecondes entre chaque transition (par exemple, 3000 pour 3 secondes)
+        disableOnInteraction: false, // Permet de continuer l'autoplay même si l'utilisateur interagit avec la slide
+    },
 });
 
 
