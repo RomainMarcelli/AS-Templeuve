@@ -13,19 +13,22 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="left-section">
-                <img src="img/logo.png" alt="Logo As Templeuve">
-                <span class="site-name">As Templeuve</span>
+        <div class="background">
+            <div class="menu__wrapper">
+                <div class="menu__bar">
+                    <a href="#" title="Logo" class="logo">
+                        <img src="  img/logo dim.png" alt="" width="100px">
+                    </a>
+                    <img class="menu-icon" src="img/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                        onclick="toggleMenu(this)">
+                    <ul class="navigation">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li onclick="showPage('equipes')">Équipes</li>
+                        <li>Contact </li>
+                    </ul>
+                </div>
             </div>
-            <div class="right-section">
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Équipes</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <main>
@@ -75,8 +78,6 @@
         </div>
 
         <!-- fin CARROUSSEL -->
-
-        <hr>
 
         <div class="senior">
             <div class="title-container">
@@ -133,7 +134,7 @@
 
         <div class="equipe">
 
-            <a href="#">Voir les autres équipes</a>
+            <a onclick="showPage('equipes')">Voir les autres équipes</a>
         </div>
 
         <!-- La boutique -->
@@ -145,7 +146,8 @@
         </div>
 
         <div class="img_boutique">
-            <a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank" ><img src="img/362535_banniere_boutique_jako_4.png" alt="Boutique AST"></a>
+            <a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank"><img
+                    src="img/362535_banniere_boutique_jako_4.png" alt="Boutique AST"></a>
         </div>
 
         <!-- Les Sponsors -->
@@ -184,6 +186,12 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
+
+        <!-- Page Equipes -->
+
+        <section id="equipes" style="display: none;">
+            <h1>Les équipes de l'AS Templeuve </h1>
+        </section>
 
         <!-- Footer -->
 

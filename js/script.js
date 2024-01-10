@@ -19,4 +19,41 @@ var swiper = new Swiper(".swiper", {
     },
 });
 
+function showPage(equipes) {
+    // Masquer toutes les sections
+    const sections = document.querySelectorAll('main div');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
 
+    // Afficher la section correspondante à la pageId
+    const selectedSection = document.getElementById(equipes);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
+
+
+// MENU BURGER
+
+const toggleMenu = () => {
+    const navigation = document.querySelector(".navigation");
+  
+    const burgerMenu = document.querySelector(".menu-icon");
+    const src = burgerMenu.getAttribute("src");
+  
+    const isBurger = src === "img/burger-menu.svg";
+    const iconName = isBurger ? "img/close.svg" : "img/burger-menu.svg";
+  
+    burgerMenu.setAttribute("src", iconName);
+  
+    if (!isBurger) {
+      navigation.classList.add("navigation--mobile--fadeout");
+      setTimeout(() => {
+        navigation.classList.toggle("navigation--mobile");
+      }, 300);
+    } else {
+      navigation.classList.remove("navigation--mobile--fadeout");
+      navigation.classList.toggle("navigation--mobile");
+    }
+  };
