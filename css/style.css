@@ -383,7 +383,7 @@ main .btn a:hover {
     display: block;
     width: 100%;
     height: 100%;
-    background: url("../img/u14-d1-poule-c__s6s9bv.jpg");
+    background: url("../img/equipes/u14-d1-poule-c__s6s9bv.jpg");
     background-size: cover;
     background-position: center;
     transform-style: preserve-3d;
@@ -425,7 +425,7 @@ main .btn a:hover {
     display: block;
     width: 100%;
     height: 100%;
-    background: url("../img//u14-niveau-2-poule-unique__s6qwmh.jpg");
+    background: url("../img/equipes/u14-niveau-2-poule-unique__s6qwmh.jpg");
     background-size: cover;
     background-position: center;
     transform-style: preserve-3d;
@@ -466,7 +466,7 @@ main .btn a:hover {
     display: block;
     width: 100%;
     height: 100%;
-    background: url("../img/u18-u19-niveau-1-poule-unique__s6qwio.jpg");
+    background: url("../img/equipes/u18-u19-niveau-1-poule-unique__s6qwio.jpg");
     background-size: cover;
     background-position: center;
     transform-style: preserve-3d;
@@ -565,7 +565,7 @@ main .img_boutique img {
 }
 
 
-/* PAGES DES EQUIPES */
+/* PAGES LES EQUIPES */
 
 #equipes h1 {
     text-align: center;

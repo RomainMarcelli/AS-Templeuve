@@ -26,13 +26,23 @@ function showPage(equipes) {
         section.style.display = 'none';
     });
 
-    // Afficher la section correspondante à la pageId
+    // Afficher la section correspondante à la equipes
     const selectedSection = document.getElementById(equipes);
     if (selectedSection) {
         selectedSection.style.display = 'block';
+
+        // Si la section est 'equipes', afficher également les divs à l'intérieur
+        if (equipes === 'equipes') {
+            const equipeDivs = selectedSection.querySelectorAll('.txt_equipe');
+            equipeDivs.forEach(div => {
+                div.style.display = 'flex'; // ou 'block' selon votre mise en page
+            });
+        }
     }
 }
+showPage('equipe');
 
+// ...
 
 // MENU BURGER
 
@@ -56,4 +66,15 @@ const toggleMenu = () => {
       navigation.classList.remove("navigation--mobile--fadeout");
       navigation.classList.toggle("navigation--mobile");
     }
-  };
+};
+
+// Ajoutez une classe à vos éléments <li>
+const menuItems = document.querySelectorAll(".navigation li");
+
+// Ajoutez un gestionnaire d'événements de clic à chaque élément <li>
+menuItems.forEach(item => {
+    item.addEventListener("click", () => {
+        // Fermez le menu burger lorsqu'un élément <li> est cliqué
+        toggleMenu();
+    });
+});
