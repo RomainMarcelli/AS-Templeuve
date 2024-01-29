@@ -9,44 +9,159 @@ body {
 
 /* HEADER */
 
-.background {
-    display: block;
-    /* width: 100vw; */
-    /* height: 100vh; */
-    opacity: 1;
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.menu__wrapper {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    z-index: 2;
-}
-
-.menu__bar {
-    /* position: fixed; */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 0 26px;
-    gap: 32px;
+header {
+    position: fixed;
     background-color: #DB0F00;
-    /* height: 60px; */
-    opacity: 0.9;
-
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+    height: 70px;
 }
 
-.menu-icon {
-    cursor: pointer;
+header .nav {
     display: flex;
-    height: 32px;
-    width: 32px;
+    height: 100%;
+    justify-content: space-between;
 }
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header .menu_logo li, header .menu_contact li {
+    list-style-type: none;
+    /* width: 14%; */
+    color: white;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 700;
+    background-image: linear-gradient(to right,
+            white,
+            white 50%,
+            white 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 3px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+header .menu_logo li:before{
+    content: '';
+    background: white;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+header .menu_contact li:before{
+    content: '';
+    background: white;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+header .menu_logo li:hover {
+    background-position: 0;
+}
+
+
+header .menu_logo li:hover::before {
+    width: 100%;
+}
+
+header .menu_contact li:hover::before {
+    width: 100%;
+}
+header .menu_contact li:hover {
+    background-position: 0;
+}
+
+header ul li a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    justify-content: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    align-items: center;
+
+}
+
+header ul li.logo {
+    display: flex;
+    justify-content: center;
+    /* Centre horizontalement */
+    align-items: center;
+    /* Centre verticalement */
+}
+
+header ul li .logo {
+    top: 11px;
+    height: 80px;
+    width: 65px;
+    padding: 10px;
+    position: relative;
+    transform: skew(-33deg);
+}
+
+header .menu_logo li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* span{
+    position: absolute;
+  } */
+
+.logo-parallelogram {
+    display: inline-block;
+    padding: 10px;
+    background-color: #DB0F00;
+    border: 2px solid white;
+    /* Couleur de fond du parallélogramme */
+    color: #fff;
+    /* Couleur du texte */
+    transform: skew(35deg);
+    /* Transformation pour créer un parallélogramme */
+}
+
+header span {
+    position: relative;
+}
+
+/* .nav {
+    display: none;
+} */
 
 .navigation {
     display: flex;
@@ -129,6 +244,7 @@ body {
     display: flex;
     padding: 80px 0px;
     min-height: 100%;
+    /* height: 100%; */
     background-color: #DB0F00;
     gap: 8px;
     flex-direction: column;
@@ -149,6 +265,7 @@ body {
         opacity: 1;
         width: 100%;
         height: calc(100vh - 93px);
+        /* height: 100%; */
     }
 }
 
@@ -182,7 +299,7 @@ main .title h1 {
     color: #DB0F00;
     text-align: center;
     font-family: sans-serif;
-    margin-top: 0;
+    margin-top: 95px;
 }
 
 main .title img {

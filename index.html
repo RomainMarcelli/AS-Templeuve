@@ -13,29 +13,67 @@
 
 <body>
     <header>
-        <div class="background">
-            <div class="menu__wrapper">
-                <div class="menu__bar">
-                    <a href="index.html" title="Logo" class="logo">
-                        <img src="img/logo dim.png" alt="" width="100px">
+        <nav id="navbar" class="nav">
+            
+            <ul class="menu_burger">
+                <li>
+                    <a href="#">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu' alt='Burger Menu' onclick="toggleMenu()">
+                        <span id="menuText">Menu</span>
+                        <span id="menuFermer" style="display: none;">Fermer</span>
                     </a>
-                    <img class="menu-icon" src="img/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
-                        onclick="toggleMenu(this)">
-                    <ul class="navigation">
-                        <li><a href="index.html">Accueil</a></li>
-                        <li onclick="showPage('equipes')">Équipes</li>
-                        <li>Contact </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                </li>                
+                <!-- <li><a href="#">
+                    <svg class="burger-menu" width="51px" height="51px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                            <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                    MENU
+                </a>
+                </li> -->
+
+            </ul>
+            <ul class="menu_logo">
+                <li><a href="#">Actualités</a></li>
+                <li><a href="#">Le club</a></li>
+                <li class="logo-container">
+                    <span class="logo-parallelogram">
+                        <img class="logo" src="img/logo.png" alt="Logo" height="120px" width="100px">
+                    </span>
+                </li>
+                <li><a href="#">Équipes</a></li>
+                <li><a href="#">La Boutique</a></li>
+            </ul>
+            <ul class="menu_contact">
+
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <ul class="navigation">
+                <li><a href="#">Actualités</a></li>
+                <li><a href="#">Equipes</a></li>
+                <li><a href="#">Le club</a></li>
+                <li><a href="#">La boutique</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Evènements</a></li>
+                <li><a href="#">Compétition</a></li>
+                <li><a href="#">Le staff</a></li>
+                <li><a href="#">Le stade</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <div class="title">
             <div class="content">
                 <h1>Association Sportive de Templeuve</h1>
-                <img src="img/logo.png" alt="Logo As Templeuve">
+                <!-- <img src="img/logo.png" alt="Logo As Templeuve"> -->
             </div>
         </div>
         <div class="swiper">
