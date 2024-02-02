@@ -71,6 +71,10 @@ header .menu_logo li:before{
     transition: all 0.2s ease-in-out;
 }
 
+header .menu_logo .logo-container:before{
+    content: none;
+}
+
 header .menu_contact li:before{
     content: '';
     background: white;
