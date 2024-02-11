@@ -1,19 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
-  font-family: "Space Mono", monospace;
-  height: 100vh;
-  background-color: #030b0d;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* background-color: rgb(233, 229, 229); */
+  /* font-family: Helvetica, Arial, Lucida, sans-serif; */
+  font-weight: bold;
+  /* font-size: 14px; */
+  padding: 0px;
+  margin: 0px;
 }
 
 img {
@@ -115,4 +114,8 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   opacity: 0.85;
+}
+
+.nav .menu_burger .menu-icon{
+  width: 51px !important;
 }
