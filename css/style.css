@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(233, 229, 229);
+    /* background-color: rgb(233, 229, 229); */
     /* font-family: Helvetica, Arial, Lucida, sans-serif; */
     font-weight: bold;
     /* font-size: 14px; */
@@ -7,78 +7,17 @@ body {
     margin: 0px;
 }
 
-header {
-    display: flex;
-    background-color: #DB0F00;
-}
-
-header .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    width: 100%;
-    padding: 0 20px;
-}
-
-
-header img {
-    width: 90px;
-    height: 120px;
-    margin: 12px;
-}
-
-header .site-name {
-    color: white;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    margin-left: 10px;
-    font-size: 24px;
-}
-
-.left-section,
-.center-section,
-.right-section {
-    display: flex;
-    align-items: center;
-}
-
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header ul li {
-    margin-right: 15px;
-}
-
-header ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-
-/* Fin HEADER */
-
 /* Début MAIN */
 
 main .title {
     padding: 20px;
-    /* height: 400px; 
-    background-image: url('../img/couche_soleil.jpg'); 
-    background-size: cover;
-    background-position: 0% 64%;
-    filter: brightness(0.8); */
 }
 
 main .title h1 {
     color: #DB0F00;
     text-align: center;
     font-family: sans-serif;
-    margin-top: 0;
+    margin-top: 95px;
 }
 
 main .title img {
@@ -94,11 +33,6 @@ main .content {
 }
 
 /* Carroussel */
-
-/* .swiper {
-    max-width: 800px;
-    aspect-ratio: 16/9;
-} */
 
 .swiper-slide {
     display: flex;
@@ -123,7 +57,7 @@ main .content {
     --swiper-pagination-bullet-inactive-opacity: 0.4;
 }
 
-.swiper-pagination{
+.swiper-pagination {
     position: static;
     margin-top: 10px;
 }
@@ -138,11 +72,11 @@ main .content {
     transition: 0.4s ease-in-out;
 }
 
- .swiper-slide:hover img {
+.swiper-slide:hover img {
     filter: grayscale(1) brightness(0.4);
 }
 
- .swiper-slide:hover::after {
+.swiper-slide:hover::after {
     opacity: 1;
     inset: 20px;
 }
@@ -195,20 +129,20 @@ main .content {
 /* FIN CARROUSSEL */
 
 
-main .senior .stat{
+main .senior .stat {
     display: flex;
 }
 
-main .senior .stat iframe{
+main .senior .stat iframe {
     padding: 10px;
 }
 
-main .btn{
+main .btn {
     text-align: center;
-    margin: 10px;
+    margin: 35px;
 }
 
-main .btn a{
+main .btn a {
     color: #DB0F00;
     border: 2px solid #DB0F00;
     border-radius: 5px;
@@ -220,13 +154,13 @@ main .btn a{
     background-color: #fff;
 }
 
-main .btn a:hover{
+main .btn a:hover {
     color: #fff;
     background-color: #DB0F00;
 }
 
 /* Parallaxe */
-  
+
 
 /* TEST */
 .title-container {
@@ -238,11 +172,13 @@ main .btn a:hover{
 .bar {
     flex-grow: 1;
     height: 1px;
-    background-color: #DB0F00; /* Couleur de la barre */
+    background-color: #DB0F00;
+    /* Couleur de la barre */
 }
 
 .second_title {
-    margin: 20px 10px; /* Marge autour du titre pour l'espacement */
+    margin: 20px 10px;
+    /* Marge autour du titre pour l'espacement */
     font-size: 24px;
     color: #DB0F00;
     font-family: sans-serif;
@@ -251,4 +187,224 @@ main .btn a:hover{
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
+}
+
+/* **************************************** */
+
+/* 1 */
+
+/* **************************************** */
+
+.row {
+    display: flex;
+}
+
+.row h1 {
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.tdimension {
+    width: 300px;
+    height: 300px;
+    margin: 0px auto 40px auto;
+    perspective: 1000px;
+}
+
+.tdimension a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/equipes/u14-d1-poule-c__s6s9bv.jpg");
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg);
+    transition: all 0.8s;
+    text-decoration: none;
+}
+
+.tdimension:hover a {
+    transform: rotateX(20deg);
+}
+
+.tdimension a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #DB0F00;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+/* **************************************** */
+
+/* 2 */
+
+/* **************************************** */
+
+.tdimension2 {
+    width: 300px;
+    height: 300px;
+    margin: 0px auto 40px auto;
+    perspective: 1000px;
+}
+
+.tdimension2 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/equipes/u14-niveau-2-poule-unique__s6qwmh.jpg");
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg);
+    transition: all 0.8s;
+    text-decoration: none;
+}
+
+.tdimension2:hover a {
+    transform: rotateX(20deg);
+}
+
+.tdimension2 a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+/* **************************************** */
+
+/* 3 */
+
+/* ******************************************* */
+.tdimension3 {
+    width: 300px;
+    height: 300px;
+    margin: 0px auto 40px auto;
+    perspective: 1000px;
+}
+
+.tdimension3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/equipes/u18-u19-niveau-1-poule-unique__s6qwio.jpg");
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+    transform: rotateX(70deg);
+    transition: all 0.8s;
+    text-decoration: none;
+}
+
+.tdimension3:hover a {
+    transform: rotateX(20deg);
+}
+
+.tdimension3 a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: #DB0F00;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+main .equipe {
+    display: flex;
+    justify-content: center;
+}
+
+main .equipe a {
+    color: #DB0F00;
+    border: 2px solid #DB0F00;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+main .equipe a:hover {
+    color: #fff;
+    background-color: #DB0F00;
+}
+
+/* Caroussel partenaire */
+
+.partenaire .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partenaire .swiper-slide img {
+    display: block;
+    width: 100%;
+    max-width: 660px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.partenaire .swiper {
+    --swiper-theme-color: #DB0F00;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-opacity: 0.4;
+}
+
+.partenaire .swiper-pagination {
+    position: static;
+    margin-top: 10px;
+}
+
+.partenaire .swiper-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 0px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.partenaire .swiper-slide:hover img {
+    filter: none;
+}
+
+
+/* La boutique */
+
+main .img_boutique img {
+    width: 100%;
+}
+
+
+/* PAGES LES EQUIPES */
+
+#equipes h1 {
+    text-align: center;
+    color: #DB0F00;
+    font-family: sans-serif;
+    text-transform: uppercase;
 }

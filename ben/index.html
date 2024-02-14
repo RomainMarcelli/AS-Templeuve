@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="menu__wrapper">
+            <div class="menu__bar">
+                <a href="#" title="Logo" class="logo">
+                    <img src="../img/logo dim.png" alt="" width="100px">
+                </a>
+                <img class="menu-icon" src="img/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                    onclick="toggleMenu(this)">
+                <ul class="navigation">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li onclick="showPage('equipes')">Équipes</li>
+                    <li>Contact </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
