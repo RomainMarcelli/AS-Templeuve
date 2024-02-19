@@ -1,5 +1,6 @@
 body {
     /* background-color: rgb(233, 229, 229); */
+    background-color: rgb(255 243 243 / 25%);
     /* font-family: Helvetica, Arial, Lucida, sans-serif; */
     font-weight: bold;
     /* font-size: 14px; */
@@ -171,7 +172,7 @@ main .btn a:hover {
 
 .bar {
     flex-grow: 1;
-    height: 1px;
+    height: 2px;
     background-color: #DB0F00;
     /* Couleur de la barre */
 }
