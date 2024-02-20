@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 body {
     /* background-color: rgb(233, 229, 229); */
     background-color: rgb(255 243 243 / 25%);
@@ -12,13 +16,44 @@ body {
 
 main .title {
     padding: 20px;
+    background-image: url(../img/couche_soleil.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
+
 main .title h1 {
-    color: #DB0F00;
+    /* color: #DB0F00; */
+    color: white;
     text-align: center;
     font-family: sans-serif;
     margin-top: 95px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+
+main .title .AST{
+    margin-top: 20px;
+}
+
+main .title h3 {
+    /* color: #DB0F00; */
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    /* margin-top: 95px;
+    font-size: 50px; */
+    text-transform: uppercase;
+}
+
+main .title .black-text{
+    color: #DB0F00;
 }
 
 main .title img {
@@ -32,6 +67,13 @@ main .content {
     position: relative;
     z-index: 1;
 }
+main .title .content svg{
+    fill: white;
+    display: block;
+    margin: auto;
+    width: 32px;
+}
+
 
 /* Carroussel */
 
@@ -54,7 +96,7 @@ main .content {
 .swiper {
     --swiper-theme-color: #DB0F00;
     --swiper-pagination-bullet-size: 10px;
-    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-color: grey;
     --swiper-pagination-bullet-inactive-opacity: 0.4;
 }
 
@@ -370,7 +412,7 @@ main .equipe a:hover {
 .partenaire .swiper {
     --swiper-theme-color: #DB0F00;
     --swiper-pagination-bullet-size: 10px;
-    --swiper-pagination-bullet-inactive-color: #fff;
+    --swiper-pagination-bullet-inactive-color: grey;
     --swiper-pagination-bullet-inactive-opacity: 0.4;
 }
 
