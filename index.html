@@ -11,58 +11,46 @@
     <link rel="stylesheet" href="css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
-    <script src="js/header.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav id="navbar" class="nav">
-            
+
             <ul class="menu_burger">
                 <li>
                     <a href="#">
-                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu' alt='Burger Menu' onclick="toggleMenu()">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu'
+                            alt='Burger Menu' onclick="toggleMenu()">
                         <span id="menuText">Menu</span>
                         <span id="menuFermer" style="display: none;">Fermer</span>
                     </a>
-                </li>                
-                <!-- <li><a href="#">
-                    <svg class="burger-menu" width="51px" height="51px" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg" stroke="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M4 18L20 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M4 12L20 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M4 6L20 6" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
-                        </g>
-                    </svg>
-                    MENU
-                </a>
-                </li> -->
-    
+                </li>
+
             </ul>
             <ul class="menu_logo">
                 <li><a href="#">Actualités</a></li>
                 <li><a href="#">Le club</a></li>
                 <li class="logo-container">
-                    <span class="logo-parallelogram">
-                        <img class="logo" src="img/logo.png" alt="Logo" height="120px" width="100px">
-                    </span>
+                    <a href="index.html">
+                        <span class="logo-parallelogram">
+                            <img class="logo" src="img/logo.png" alt="Logo" height="120px" width="100px">
+                        </span>
+                    </a>
                 </li>
-                <li><a href="html/equipe.html">Équipes</a></li>
-                <li><a href="#">La Boutique</a></li>
+                <li><a href="equipe.html">Équipes</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La Boutique</a></li>
             </ul>
             <ul class="menu_contact">
-    
-                <li><a href="#">Contact</a></li>
+
+                <li><a href="#">liens utiles</a></li>
             </ul>
-    
+
             <ul class="navigation">
                 <li><a href="#">Actualités</a></li>
-                <li><a href="html/equipe.html">Equipes</a></li>
+                <li><a href="equipe.html">Equipes</a></li>
                 <li><a href="#">Le club</a></li>
-                <li><a href="#">La boutique</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La boutique</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Evènements</a></li>
                 <li><a href="#">Compétition</a></li>
@@ -75,10 +63,32 @@
     <main>
         <div class="title">
             <div class="content">
-                <h1>Association Sportive de Templeuve</h1>
-                <!-- <img src="img/logo.png" alt="Logo As Templeuve"> -->
+                <h1>Bienvenue sur le site de </h1>
+                <h1 class="AST">
+                    <!-- l'<span class="black-text">A</span>ssociation
+                    <span class="black-text">S</span>portive de
+                    <span class="black-text">T</span>empleuve -->
+                    L'AS Templeuve en Pévèle <br>
+                </h1>
+                <h3>Site officiel</h3>
+                <a href="#test">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M544 416L32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32zm22.6-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L480 274.7 480 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96zm-320-45.3c-12.5-12.5-32.8-12.5-45.3 0L160 274.7 160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7L54.6 233.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3z" />
+                    </svg>
+                </a>
             </div>
         </div>
+
+        <div id="test"></div>
+
+        <!-- Actualité -->
+        <div class="title-container">
+            <div class="bar"></div>
+            <h1 class="second_title">Les actualités</h1>
+            <div class="bar"></div>
+        </div>
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -120,7 +130,7 @@
 
         <!-- fin CARROUSSEL -->
 
-        <div class="senior">
+        <div class="senior" id="senior">
             <div class="title-container">
                 <div class="bar"></div>
                 <h1 class="second_title">Senior A Poule D</h1>
@@ -148,6 +158,13 @@
 
         <!-- Fin Classement / match -->
 
+        <!-- les équipes -->
+
+        <div class="title-container">
+            <div class="bar"></div>
+            <h1 class="second_title">Le Staff</h1>
+            <div class="bar"></div>
+        </div>
         <!-- les équipes -->
 
         <div class="title-container">
@@ -337,7 +354,6 @@
             </div>
         </footer>
     </main>
-    <script src="js/header.js"></script>
 </body>
 
 </html>
