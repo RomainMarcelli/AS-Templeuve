@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    /* background-color: rgb(233, 229, 229); */
+    background-color: rgb(255 243 243 / 25%);
+    /* font-family: Helvetica, Arial, Lucida, sans-serif; */
+    font-weight: bold;
+    /* font-size: 14px; */
+    padding: 0px;
+    margin: 0px;
+}
+
+main .title {
+    padding: 20px;
+    background-image: url(../img/couche_soleil.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+main .title h1 {
+    /* color: #DB0F00; */
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 95px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+
+main .title .AST{
+    margin-top: 20px;
+}
+
+main .title h3 {
+    /* color: #DB0F00; */
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    /* margin-top: 95px;
+    font-size: 50px; */
+    text-transform: uppercase;
+}
+
+main .title .black-text{
+    color: #DB0F00;
+}
+
+main .title img {
+    height: 120px;
+    width: 90px;
+    display: block;
+    margin: auto;
+}
+
+main .content {
+    position: relative;
+    z-index: 1;
+}
+main .title .content svg{
+    fill: white;
+    display: block;
+    margin: auto;
+    width: 32px;
+}
