@@ -26,10 +26,10 @@ main .title {
 main .title h1 {
     /* color: #DB0F00; */
     color: white;
-    text-align: center;
+    text-align: left;
     font-family: sans-serif;
     margin-top: 95px;
-    font-size: 50px;
+    font-size: 54px;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
 }
@@ -63,9 +63,63 @@ main .content {
     position: relative;
     z-index: 1;
 }
+main .content p{
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+
+}
+
+.btn_contact {
+    padding: 15px;
+    color: white;
+    background-color: #DB0F00;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.btn_contact:hover {
+    background-color: white;
+    color: #DB0F00;
+}
+
+.btn_joindre {
+    padding: 15px;
+    color: #DB0F00;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+.btn_joindre:hover {
+    color: white;
+    background-color: #DB0F00;
+}
+
+.btn_joindre:hover ~ .btn_contact {
+    color: #DB0F00;
+    background-color: white;
+}
+
+.btn_contact:hover ~ .btn_joindre {
+    background-color: #DB0F00;
+    color: white;
+}
+
+
+
+
 main .title .content svg{
     fill: white;
     display: block;
     margin: auto;
     width: 32px;
 }
+
+
+
+/* 
+main .contact  */
