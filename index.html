@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,90 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="left-section">
-                <img src="img/logo.png" alt="Logo As Templeuve">
-                <span class="site-name">As Templeuve</span>
-            </div>
-            <div class="right-section">
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Équipes</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+        <nav id="navbar" class="nav">
+
+            <ul class="menu_burger">
+                <li>
+                    <a href="#">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu'
+                            alt='Burger Menu' onclick="toggleMenu()">
+                        <span id="menuText">Menu</span>
+                        <span id="menuFermer" style="display: none;">Fermer</span>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="menu_logo">
+                <li><a href="#">Actualités</a></li>
+                <li><a href="club.html">Le club</a></li>
+                <li class="logo-container">
+                    <a href="index.html">
+                        <span class="logo-parallelogram">
+                            <img class="logo" src="img/logo.png" alt="Logo" height="120px" width="100px">
+                        </span>
+                    </a>
+                </li>
+                <li><a href="equipe.html">Équipes</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La Boutique</a></li>
+            </ul>
+            <ul class="menu_contact">
+
+                <li><a href="#">liens utiles</a></li>
+            </ul>
+
+            <ul class="navigation">
+                <li><a href="#">Actualités</a></li>
+                <li><a href="equipe.html">Equipes</a></li>
+                <li><a href="club.html">Le club</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La boutique</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Evènements</a></li>
+                <li><a href="#">Compétition</a></li>
+                <li><a href="#">Le staff</a></li>
+                <li><a href="#">Le stade</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <div class="title">
             <div class="content">
-                <h1>Association Sportive de Templeuve</h1>
-                <img src="img/logo.png" alt="Logo As Templeuve">
+                <h1>Bienvenue sur le site de </h1>
+                <h1 class="AST">
+                    <!-- l'<span class="black-text">A</span>ssociation
+                    <span class="black-text">S</span>portive de
+                    <span class="black-text">T</span>empleuve -->
+                    L'AS Templeuve en Pévèle <br>
+                </h1>
+                <h3>Site officiel</h3>
+                <a href="#test">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                            d="M544 416L32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32zm22.6-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L480 274.7 480 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96zm-320-45.3c-12.5-12.5-32.8-12.5-45.3 0L160 274.7 160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 210.7L54.6 233.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3z" />
+                    </svg>
+                </a>
             </div>
         </div>
+
+        <div id="test"></div>
+
+        <!-- Actualité -->
+        <div class="title-container">
+            <div class="bar"></div>
+            <h1 class="second_title">Les actualités</h1>
+            <div class="bar"></div>
+        </div>
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -76,9 +132,7 @@
 
         <!-- fin CARROUSSEL -->
 
-        <hr>
-
-        <div class="senior">
+        <div class="senior" id="senior">
             <div class="title-container">
                 <div class="bar"></div>
                 <h1 class="second_title">Senior A Poule D</h1>
@@ -110,10 +164,221 @@
 
         <div class="title-container">
             <div class="bar"></div>
+            <h1 class="second_title">Le Staff</h1>
+            <div class="bar"></div>
+        </div>
+        <!-- les équipes -->
+
+        <div class="title-container">
+            <div class="bar"></div>
             <h1 class="second_title">Les équipes</h1>
             <div class="bar"></div>
         </div>
+        <div class="row">
+            <div class="tdimension">
+                <a href="#">
+                    <h1>U14 A</h1>
+                </a>
+            </div>
+            <div class="tdimension2">
+                <a href="#">
+                    <h1>U14 B</h1>
+                </a>
+            </div>
+            <div class="tdimension3">
+                <a href="#">
+                    <h1>U18</h1>
+                </a>
+            </div>
+        </div>
 
+        <div class="equipe">
+
+            <a onclick="showPage('equipes')">Voir les autres équipes</a>
+        </div>
+
+        <!-- La boutique -->
+
+        <div class="title-container">
+            <div class="bar"></div>
+            <h1 class="second_title">La Boutique</h1>
+            <div class="bar"></div>
+        </div>
+
+        <div class="img_boutique">
+            <a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank"><img
+                    src="img/362535_banniere_boutique_jako_4.png" alt="Boutique AST">
+            </a>
+        </div>
+
+        <!-- Les Sponsors -->
+
+        <div class="partenaire">
+
+            <div class="title-container">
+                <div class="bar"></div>
+                <h1 class="second_title">Nos Partenaires</h1>
+                <div class="bar"></div>
+            </div>
+
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/abrinord__robhmt.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/eau-christaline__qaw5jb.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/garage-dhainaut__rd9c0n.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/la-fleur-de-houblon__robhly.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/orpi__rjf41m.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <!-- Page Equipes -->
+
+        <section id="equipes" style="display: none;">
+            <h1>Les équipes de l'AS Templeuve </h1>
+            <div class="img_equipe">
+                <div class="txt_equipe">
+                    <img src="img/equipes/seniors-a__s70u9b.png" alt="">
+                    <p>Seniors A Poule D</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/seniors-a__s70u9b.png" alt="">
+                    <p>Séniors B</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/veterans-a-11-niveau-2-poule-e__s71iff.jpg" alt="">
+                    <p>Vétérans niveau 2</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u18-u19-niveau-1-poule-unique__s6qwio.jpg" alt="">
+                    <p>U19-u18</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u15-d1-poule-a__s71jmb.jpg" alt="">
+                    <p>U15</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u14-d1-poule-c__s6s9bv.jpg" alt="">
+                    <p>U14 A</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u14-niveau-2-poule-unique__s6qwmh.jpg" alt="">
+                    <p>U14 B</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u13-a-niveau-1-poule-unique__s71z5u.jpg" alt="">
+                    <p>U13 A</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u13-niveau-2-poule-o__s70mr6.jpg" alt="">
+                    <p>U13 B</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u12-niveau-1-poule-k__s70giw.jpg" alt="">
+                    <p>U12</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u12-niveau-2-poule-j__s70mk3.jpg" alt="">
+                    <p>U12</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u11-niveau-1-poule-a__s70mv3.jpg" alt="">
+                    <p>U11</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u10-niveau-1-poule-j__s70n3j.jpg" alt="">
+                    <p>U10</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u9__s720ei.jpg" alt="">
+                    <p>U9</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u8__s3x45c.jpg" alt="">
+                    <p>U8</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u7__s3x45w.jpg" alt="">
+                    <p>U7</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/u7__s3x45w.jpg" alt="">
+                    <p>U6</p>
+                </div>
+                <div class="txt_equipe">
+                    <img src="img/equipes/baby__s1uyya.jpg" alt="">
+                    <p>BABY</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+            <div class="footer">
+                <div class="logo_icon">
+                    <img src="img/logo dim.png" alt="Logo AST">
+                    <ul class="wrapper">
+                        <li class="icon facebook" id="facebookIcon">
+                            <span class="tooltip">Facebook</span>
+                            <span class="logo_social"><i class="fab fa-facebook-f"></i></span>
+                        </li>
+                        <li class="icon twitter" id="twitterIcon">
+                            <span class="tooltip">Twitter</span>
+                            <span class="logo_social"><i class="fab fa-twitter"></i></span>
+                        </li>
+                        <li class="icon instagram" id="instagramIcon">
+                            <span class="tooltip">Instagram</span>
+                            <span class="logo_social"><i class="fab fa-instagram"></i></span>
+                        </li>
+                        <li class="icon tiktok" id="tiktokIcon">
+                            <span class="tooltip">Tik Tok</span>
+                            <span class="logo_social"><i class="fab fa-tiktok"></i></span>
+                        </li>
+                        <li class="icon youtube" id="youtubeIcon">
+                            <span class="tooltip">Youtube</span>
+                            <span class="logo_social"><i class="fab fa-youtube"></i></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="liens">
+                    <ul>
+                        <h3>liens Utiles</h3>
+                        <li><a href="#">Notre Actualités</a></li>
+                        <li><a href="#">Nos équipes</a></li>
+                        <li><a href="#">Le club</a></li>
+                        <li><a href="#">La boutique</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                    </ul>
+                </div>
+                <div class="info">
+    
+                    <ul>
+                        <h3>Informations</h3>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 
