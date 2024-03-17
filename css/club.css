@@ -1,17 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+body {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  background: #456990;
+  color: #fff;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+} */
 
 body {
-    /* background-color: rgb(233, 229, 229); */
-    /* background-color: rgb(255 243 243 / 25%); */
-    background-color: #DB0F00;
-    /* font-family: Helvetica, Arial, Lucida, sans-serif; */
+    background-color: rgb(255 243 243 / 25%);
     font-weight: bold;
-    /* font-size: 14px; */
     padding: 0px;
     margin: 0px;
+    font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+    color: #fff;
 }
 
-main .page_garde {
+main .title {
     padding: 20px;
     background-image: url(../img/couche_soleil.jpg);
     background-position: bottom;
@@ -24,22 +36,22 @@ main .page_garde {
 }
 
 
-main .page_garde h1 {
+main .title h1 {
     /* color: #DB0F00; */
     color: white;
-    text-align: center;
+    text-align: left;
     font-family: sans-serif;
     margin-top: 95px;
-    font-size: 50px;
+    font-size: 54px;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
 }
 
-main .page_garde .AST {
+main .title .AST {
     margin-top: 20px;
 }
 
-main .page_garde h3 {
+main .title h3 {
     /* color: #DB0F00; */
     color: white;
     text-align: center;
@@ -49,11 +61,7 @@ main .page_garde h3 {
     text-transform: uppercase;
 }
 
-main .page_garde .black-text {
-    color: #DB0F00;
-}
-
-main .page_garde img {
+main .title img {
     height: 120px;
     width: 90px;
     display: block;
@@ -65,179 +73,449 @@ main .content {
     z-index: 1;
 }
 
-main .page_garde .content svg {
+main .content p {
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 22px;
+
+}
+
+/* .button-container {
+    margin-top: 45px;
+}
+
+.btn_contact {
+    padding: 15px;
+    color: white;
+    background-color: #DB0F00;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.btn_joindre {
+    padding: 15px;
+    color: #DB0F00;
+    text-decoration: none;
+    border-radius: 6px;
+    background-color: white;
+    font-family: sans-serif;
+    margin-left: 12px;
+} */
+
+main .title .content svg {
     fill: white;
     display: block;
     margin: auto;
     width: 32px;
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-/* * {
-    margin: 0;
-    padding: 0;
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+    background: #DB0F00;
+    padding: 100px 0;
+    color: white;
+    font-family: sans-serif;
+    display: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Histoire */
+
+.grid{
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.histoire{
+    margin: 100px;
+    padding: 50px;
+    color: black;
+    font-size: 50px;
+    border: 2px solid #DB0F00;
+    text-decoration: none;
+}
+
+
+/* TEST BTN */
+.button {
+    display: inline-block;
+    max-width: 20rem;
+    margin: 0 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.shape {
+    fill: transparent;
+    stroke: red;
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -454;
+    stroke-width: 8px;
+    transition:
+        stroke-width 0.9s,
+        stroke-dashoffset 0.9s,
+        stroke-dasharray 0.9s;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.3rem;
+    color: #DB0F00;
+    top: -3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.shape:hover {
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* *,
+*::after,
+*::before{
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 } */
 
-html {
-    scroll-behavior: smooth;
+
+.timeline {
+    display: none;
 }
 
-
-::selection {
-    color: #fff;
-    background: #ff7979;
+.timeline ul {
+    background: #456990;
+    padding: 50px 0;
 }
 
-.timeline-wrapper {
-    max-width: 1080px;
-    margin: 50px auto;
-    padding: 0 20px;
+.timeline ul li {
+    list-style-type: none;
     position: relative;
-}
-
-.timeline-wrapper .center-line {
-    position: absolute;
-    height: 100%;
-    width: 4px;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
     background: #fff;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
 }
 
-.timeline-wrapper .timeline-row {
-    display: flex;
-}
-
-.timeline-wrapper .timeline-row-1 {
-    justify-content: flex-start;
-}
-
-.timeline-wrapper .timeline-row-2 {
-    justify-content: flex-end;
-}
-
-.timeline-wrapper .timeline-row section {
-    background: #fff;
-    border-radius: 5px;
-    width: calc(50% - 40px);
-    padding: 20px;
-    position: relative;
-}
-
-.timeline-wrapper .timeline-row section::before {
-    position: absolute;
+.timeline ul li::after {
     content: "";
-    height: 15px;
-    width: 15px;
-    background: #fff;
-    top: 28px;
-    z-index: -1;
-    transform: rotate(45deg);
-}
-
-.timeline-row-1 section::before {
-    right: -7px;
-}
-
-.timeline-row-2 section::before {
-    left: -7px;
-}
-
-.timeline-row section .icon,
-.center-line .scroll-icon {
     position: absolute;
-    background: #f2f2f2;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ff7979;
-    font-size: 17px;
-    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.center-line .scroll-icon {
-    bottom: 0px;
     left: 50%;
-    font-size: 25px;
+    bottom: 0;
     transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
 }
 
-.timeline-row-1 section .icon {
-    top: 15px;
-    right: -60px;
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: #f45b69;
 }
 
-.timeline-row-2 section .icon {
-    top: 15px;
-    left: -60px;
+.timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
 }
 
-.timeline-row section .details,
-.timeline-row section .bottom {
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #f45b69 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+    left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #f45b69;
+}
+
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: #f45b69;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view div {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+}
+
+.timeline.visible {
+    display: block;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+
+    .timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #f45b69 transparent transparent;
+    }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline-clippy ul li::after {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+    bottom: 12px;
+}
+
+.timeline-star ul li::after {
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+}
+
+.timeline-heptagon ul li::after {
+    clip-path: polygon(50% 0%,
+            90% 20%,
+            100% 60%,
+            75% 100%,
+            25% 100%,
+            0% 60%,
+            10% 20%);
+}
+
+.timeline-infinite ul li::after {
+    animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.25);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+
+/* NOS INFOS */
+
+.infos{
+    display: none;
+}
+
+.infos h2 {
+    color: black;
+}
+
+.infos.visible{
+    display: block;
+}
+
+
+/* MEMBRE DU CLUB  */
+
+/* Style de base pour la mise en page */
+
+.direction{
+    display: none;
+}
+
+.direction.visible{
+    display: block;
+}
+
+
+/* Style de base pour la mise en page */
+.organisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style pour chaque poste */
+.organisation h2,.organisation h3 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    width: 250px;
+    text-align: center;
+}
+.president {
+    position: relative;
+}
+
+.president::after {
+    content: '';
+    position: absolute;
+    bottom: -193px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 204px;
+    background-color: black;
+}
+
+
+.tresor_assist, .commiter, .membre{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.timeline-row section .details .title {
-    font-size: 22px;
-    font-weight: 600;
+/* .tresorier h2, .responsable h2, .membre_conseil h2{
+    margin-right: 240px;
+} */
+
+hr{
+    height: 2px;
+    width: 250px;
+    color: black;
+    background-color: black;
 }
 
-.timeline-row section p {
-    margin: 10px 0 17px 0;
+/* .tresorier::after {
+    content: '';
+    position: absolute;
+    bottom: -58%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
 }
 
-.timeline-row section .bottom a {
-    text-decoration: none;
-    background: #ff7979;
-    color: #fff;
-    padding: 7px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+.responsable::after {
+    content: '';
+    position: absolute;
+    bottom: -67%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
 }
 
-.timeline-row section .bottom a:hover {
-    transform: scale(0.97);
+.membre_conseil::after {
+    content: '';
+    position: absolute;
+    bottom: -75%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
+} */
+
+
+.secrétaire h3{
+    display: none;
 }
 
-@media(max-width: 790px) {
-    .timeline-wrapper .center-line {
-        left: 40px;
-    }
 
-    .timeline-wrapper .timeline-row {
-        margin: 30px 0 3px 60px;
-    }
 
-    .timeline-wrapper .timeline-row section {
-        width: 100%;
-    }
-
-    .timeline-row-1 section::before {
-        left: -7px;
-    }
-
-    .timeline-row-1 section .icon {
-        left: -60px;
-    }
-}
-
-@media(max-width: 440px) {
-
-    .timeline-wrapper .center-line,
-    .timeline-row section::before,
-    .timeline-row section .icon {
-        display: none;
-    }
-
-    .timeline-wrapper .timeline-row {
-        margin: 10px 0;
-    }
-}
+/* TEST */
