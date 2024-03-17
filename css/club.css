@@ -123,6 +123,7 @@ main .title .content svg {
     padding: 100px 0;
     color: white;
     font-family: sans-serif;
+    display: none;
 }
 
 .container {
@@ -136,9 +137,78 @@ h1 {
     font-size: 2.5rem;
 }
 
+/* Histoire */
+
+.grid{
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.histoire{
+    margin: 100px;
+    padding: 50px;
+    color: black;
+    font-size: 50px;
+    border: 2px solid #DB0F00;
+    text-decoration: none;
+}
+
+
+/* TEST BTN */
+.button {
+    display: inline-block;
+    max-width: 20rem;
+    margin: 0 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.shape {
+    fill: transparent;
+    stroke: red;
+    stroke-dasharray: 120 500;
+    stroke-dashoffset: -454;
+    stroke-width: 8px;
+    transition:
+        stroke-width 0.9s,
+        stroke-dashoffset 0.9s,
+        stroke-dasharray 0.9s;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.3rem;
+    color: #DB0F00;
+    top: -3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.shape:hover {
+    stroke-width: 5px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* *,
+*::after,
+*::before{
+    box-sizing: border-box;
+} */
+
+
+.timeline {
+    display: none;
+}
 
 .timeline ul {
     background: #456990;
@@ -211,10 +281,6 @@ time {
     margin-bottom: 8px;
 }
 
-
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline ul li::after {
     transition: background 0.5s ease-in-out;
 }
@@ -229,19 +295,19 @@ time {
     transition: all 0.5s ease-in-out;
 }
 
-.timeline ul li:nth-child(odd) div {
-    transform: translate3d(200px, 0, 0);
-}
-
-.timeline ul li:nth-child(even) div {
-    transform: translate3d(-200px, 0, 0);
-}
-
 .timeline ul li.in-view div {
-    transform: none;
     visibility: visible;
     opacity: 1;
+    transform: none;
 }
+
+.timeline.visible {
+    display: block;
+    box-sizing: border-box;
+}
+
+
+
 
 
 /* GENERAL MEDIA QUERIES
@@ -335,3 +401,121 @@ time {
         transform: translateX(-50%) scale(1);
     }
 }
+
+
+/* NOS INFOS */
+
+.infos{
+    display: none;
+}
+
+.infos h2 {
+    color: black;
+}
+
+.infos.visible{
+    display: block;
+}
+
+
+/* MEMBRE DU CLUB  */
+
+/* Style de base pour la mise en page */
+
+.direction{
+    display: none;
+}
+
+.direction.visible{
+    display: block;
+}
+
+
+/* Style de base pour la mise en page */
+.organisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style pour chaque poste */
+.organisation h2,.organisation h3 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    width: 250px;
+    text-align: center;
+}
+.president {
+    position: relative;
+}
+
+.president::after {
+    content: '';
+    position: absolute;
+    bottom: -193px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 204px;
+    background-color: black;
+}
+
+
+.tresor_assist, .commiter, .membre{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .tresorier h2, .responsable h2, .membre_conseil h2{
+    margin-right: 240px;
+} */
+
+hr{
+    height: 2px;
+    width: 250px;
+    color: black;
+    background-color: black;
+}
+
+/* .tresorier::after {
+    content: '';
+    position: absolute;
+    bottom: -58%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
+}
+
+.responsable::after {
+    content: '';
+    position: absolute;
+    bottom: -67%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
+}
+
+.membre_conseil::after {
+    content: '';
+    position: absolute;
+    bottom: -75%;
+    left: 480px;
+    width: 251px;
+    height: 1px;
+    background-color: black;
+} */
+
+
+.secrétaire h3{
+    display: none;
+}
+
+
+
+/* TEST */
