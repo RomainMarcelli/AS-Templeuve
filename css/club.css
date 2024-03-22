@@ -1,8 +1,8 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   box-sizing: border-box;
 }
 /* 
@@ -140,7 +140,7 @@ h1 {
 /* Histoire */
 
 .grid{
-    margin: 100px 0;
+    margin: 10px 0 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -422,11 +422,11 @@ time {
 
 /* Style de base pour la mise en page */
 
-.direction{
+.direction, .coachs, .dirigeant{
     display: none;
 }
 
-.direction.visible{
+.direction.visible, .coachs.visible, .dirigeant.visible{
     display: block;
 }
 
@@ -440,18 +440,39 @@ time {
 
 /* Style pour chaque poste */
 .organisation h2,.organisation h3 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px;
     margin: 10px 0;
     color: black;
     width: 250px;
     text-align: center;
 }
-.president {
+
+.president, .vice_pre, .secrétaire, .trésorier, .membre_conseil, .secret_adjoint {
     position: relative;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 1.5) 1px 1px 22px;    /* Ajoute une ombre avec un flou de 10px */
 }
 
-.president::after {
+.president h2, .vice_pre h2, .secrétaire h2, .trésorier h2, .membre_conseil h2, .secret_adjoint h2 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.president h3, .vice_pre h3, .secrétaire h3, .trésorier h3, .membre_conseil h3, .secret_adjoint h3 {
+    margin: 0;
+    text-transform: uppercase;
+    color: #DB0F00;
+}
+
+.vice_pre img, .secrétaire img, .trésorier img, .membre_conseil img, .secret_adjoint  img{
+    height: 272px;
+    width: 250px;
+}
+
+/* .president::after {
     content: '';
     position: absolute;
     bottom: -193px;
@@ -460,19 +481,15 @@ time {
     width: 1px;
     height: 204px;
     background-color: black;
-}
+} */
 
-
-.tresor_assist, .commiter, .membre{
+.secret_adj, .responsable, .vice_secret  {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
 }
-
-/* .tresorier h2, .responsable h2, .membre_conseil h2{
-    margin-right: 240px;
-} */
 
 hr{
     height: 2px;
@@ -481,41 +498,164 @@ hr{
     background-color: black;
 }
 
-/* .tresorier::after {
-    content: '';
-    position: absolute;
-    bottom: -58%;
-    left: 480px;
-    width: 251px;
-    height: 1px;
-    background-color: black;
-}
-
-.responsable::after {
-    content: '';
-    position: absolute;
-    bottom: -67%;
-    left: 480px;
-    width: 251px;
-    height: 1px;
-    background-color: black;
-}
-
-.membre_conseil::after {
-    content: '';
-    position: absolute;
-    bottom: -75%;
-    left: 480px;
-    width: 251px;
-    height: 1px;
-    background-color: black;
-} */
 
 
-.secrétaire h3{
+.secrétaire .secrétaire_adj{
     display: none;
 }
 
 
 
-/* TEST */
+/* COACHS */
+
+.coachs {
+    background-color: #DB0F00;
+}
+
+.coachs h1{
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+.entraineur{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #DB0F00;
+}
+
+.coachs h2 {
+    color: black;
+    text-align: center;
+}
+.coachs h3{
+    color: #DB0F00;
+    text-align: center;
+}
+.coachs h4 {
+    color: deepskyblue;
+    text-align: center;
+}
+
+.coachs img{
+    height: 272px;
+    width: 250px;
+}
+
+.coachs .txt {
+    background-color: white;
+}
+
+.les_coachs{
+    margin: 15px;
+    border: 2px solid white;
+    background-color: white;
+}
+
+
+/* LES DIRIGEANTS */
+
+.dirigeant h1 {
+    color: #DB0F00;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.dirigeant .all_dirigeant h2{
+    color: white;
+    text-align: center;
+}
+
+.dirigeant .all_dirigeant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dirigeant h1 {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+/* // base */
+.dirigeant .flip {
+    position: relative;
+    >.front,
+    >.back {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .5s;
+        transition-property: transform, opacity;
+    }
+    >.front {
+        transform: rotateY(0deg);
+    }
+    >.back {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(-180deg);
+    }
+    &:hover {
+        >.front {
+            transform: rotateY(180deg);
+        }
+        >.back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flip-vertical {
+        >.back {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.front {
+                transform: rotateX(180deg);
+            }
+            >.back {
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+
+/* // custom */
+.dirigeant .flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 4em;
+    height: 272px;
+    width: 250px;
+    >.front,
+    >.back {
+      display: block;
+      color: white;
+      width: inherit;
+      background-size: cover!important;
+      background-position: center!important;
+      height:  320px;;
+      padding: 1em 2em;
+      background: #DB0F00;
+      border-radius: 10px;
+      p {
+        font-size: 0.9125rem;
+        line-height: 160%;
+        color: white;
+      }
+    }
+}
+
+.dirigeant .text-shadow {
+text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+/* FLIP CARD */
+
