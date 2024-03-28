@@ -114,6 +114,11 @@ main .title {
   gap: 1rem;
 }
 
+.u11{
+  text-decoration: none;
+  color: black;
+}
+
 .card-equipe {
   aspect-ratio: 1;
   background-size: cover;
