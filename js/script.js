@@ -121,3 +121,48 @@ menuItems.forEach(item => {
         toggleMenu();
     });
 });
+
+// Accédez à l'iframe par son ID
+var iframe = document.getElementById('659815e5b16e1b08c507a730');
+
+// Vérifiez si l'iframe a été chargée
+iframe.onload = function() {
+    // Accédez au document de l'iframe
+    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Trouvez tous les éléments div avec la classe 'c-widget__footer'
+    var divsToDelete = iframeDoc.querySelectorAll('.c-widget__footer');
+
+    // Parcourez tous les éléments div sélectionnés
+    divsToDelete.forEach(function(div) {
+        // Supprimez chaque élément div du DOM de l'iframe
+        div.parentNode.removeChild(div);
+    });
+};
+
+
+function showIframe(id) {
+    // Masquer tous les iframes
+    var iframes = document.querySelectorAll('.classement .iframe');
+    iframes.forEach(function(iframe) {
+        iframe.style.display = 'none';
+    });
+
+    // Afficher l'iframe correspondant à l'ID donné
+    var iframeToShow = document.getElementById(id);
+    if (iframeToShow) {
+        iframeToShow.style.display = 'block';
+    }
+
+    // Retirez la classe active de tous les liens
+    var links = document.querySelectorAll('.navbar a');
+    links.forEach(function(link) {
+        link.classList.remove('active');
+    });
+
+    // Ajoutez la classe active au lien actuellement cliqué
+    var currentLink = document.querySelector('.navbar a[href="#"][onclick="showIframe(\'' + id + '\')"]');
+    if (currentLink) {
+        currentLink.classList.add('active');
+    }
+}
