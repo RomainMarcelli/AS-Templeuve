@@ -1,0 +1,135 @@
+body {
+    /* background-color: rgb(233, 229, 229); */
+    /* font-family: Helvetica, Arial, Lucida, sans-serif; */
+    font-weight: bold;
+    /* font-size: 14px; */
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+  }
+  
+  
+  main .title {
+    padding: 20px;
+    background-image: url(../../img/equipes/u9__s720ei.jpg);
+    /* background-position: bottom; */
+    background-size: cover;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  
+  main .title h1 {
+    /* color: #DB0F00; */
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 95px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  main .title .AST {
+    margin-top: 20px;
+  }
+  
+  main .title h3 {
+    /* color: #DB0F00; */
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    /* margin-top: 95px;
+    font-size: 50px; */
+    text-transform: uppercase;
+  }
+  
+  main .title .black-text {
+    color: #DB0F00;
+  }
+  
+  main .title img {
+    height: 120px;
+    width: 90px;
+    display: block;
+    margin: auto;
+  }
+  
+  main .content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  main .title .content svg {
+    fill: white;
+    display: block;
+    margin: auto;
+    width: 32px;
+  }
+
+  /* BAR De transitions */
+
+.title-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #DB0F00;
+  /* Couleur de la barre */
+}
+
+.second_title {
+  margin: 20px 10px;
+  /* Marge autour du titre pour l'espacement */
+  font-size: 24px;
+  color: #DB0F00;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border: 2px solid #DB0F00;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* STAFF TECHNIQUE */
+
+.staff_technique {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.staff_technique .les_coachs{
+  font-family: sans-serif;
+  text-align: center;
+  border: 2px solid black;
+  margin: 30px;
+}
+
+.staff_technique .les_coachs img {
+  height: 272px;
+  width: 250px;
+  border-bottom: 2px solid black;
+}
+
+.staff_technique .les_coachs h2 {
+  color: #DB0F00;
+  /* color: black; */
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.staff_technique .les_coachs h3{
+  color: black;
+  /* color: #DB0F00; */
+  text-decoration: underline;
+}

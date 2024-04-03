@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
@@ -38,7 +37,7 @@ main .title h1 {
     font-family: "Oswald", sans-serif;
 }
 
-main .title .AST{
+main .title .AST {
     margin-top: 20px;
 }
 
@@ -52,7 +51,7 @@ main .title h3 {
     text-transform: uppercase;
 }
 
-main .title .black-text{
+main .title .black-text {
     color: #DB0F00;
 }
 
@@ -67,13 +66,42 @@ main .content {
     position: relative;
     z-index: 1;
 }
-main .title .content svg{
+
+main .title .content svg {
     fill: white;
     display: block;
     margin: auto;
     width: 32px;
 }
 
+/* BARRE D'éroulante */
+
+/* Style de la barre d'annonce */
+.announcement-bar {
+    background-color: #ff0000;
+    /* Couleur de fond de la barre */
+    color: #ffffff;
+    /* Couleur du texte */
+    padding: 10px 0;
+    /* Espacement intérieur de la barre */
+}
+
+/* Style du texte à l'intérieur de la barre */
+.announcement-bar p {
+    margin: 0;
+    /* Supprime les marges par défaut */
+    font-size: 18px;
+    font-family: sans-serif;
+    /* Taille du texte */
+}
+
+/* Style de défilement pour le marquee */
+marquee {
+    width: 100%;
+    /* Occupe toute la largeur de son conteneur */
+    overflow: hidden;
+    /* Cache tout contenu débordant */
+}
 
 /* Carroussel */
 
@@ -203,8 +231,50 @@ main .btn a:hover {
     background-color: #DB0F00;
 }
 
-/* Parallaxe */
+.nav_classement{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
 
+.navbar {
+    overflow-x: scroll; /* Ajout de la scrollbar horizontale */
+    overflow-y: hidden; /* Masquage de la scrollbar verticale */
+    white-space: nowrap; /* Permet aux éléments de rester sur une seule ligne */
+    background-color: #F9FAFB;
+    width: 100%; /* Force la barre de navigation à occuper toute la largeur */
+    height: 53.67px;
+    margin-top: 11px;
+}
+
+.navbar a {
+    display: inline-block; /* Affiche les liens en ligne les uns à côté des autres */
+    text-decoration: none;
+    text-align: center;
+    padding: .5rem .75rem;
+    color: #2b2f36;
+    background: transparent;
+    border-color: #2b2f36;
+    font-family: sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Ajout de la bordure supérieure rouge lorsqu'un lien est activé */
+.navbar a:active {
+    border-top: 3px solid #DB0F00;
+    color: black;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.classement .iframe {
+    display: none;
+}
 
 /* TEST */
 .title-container {
@@ -443,6 +513,20 @@ main .img_boutique img {
     width: 100%;
 }
 
+main .title-container a{
+    text-decoration: none;
+}
+
+main .title-container h1:hover{
+    color: white;
+    background-color: #DB0F00;
+}
+
+.link_partenaire{
+    position: relative;
+    z-index: 1;    
+}
+
 
 /* PAGES LES EQUIPES */
 
@@ -452,3 +536,8 @@ main .img_boutique img {
     font-family: sans-serif;
     text-transform: uppercase;
 }
+
+.c-widget__footer {
+    display: none;
+}
+

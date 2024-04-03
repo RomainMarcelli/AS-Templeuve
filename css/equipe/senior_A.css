@@ -11,7 +11,7 @@ body {
 
 main .title {
   padding: 20px;
-  background-image: url(../../img/equipes/u14-d1-poule-c__s6s9bv.jpg);
+  background-image: url(../../img/equipes/seniors-a__s70u9b.png);
   /* background-position: bottom; */
   background-size: cover;
   height: 99vh;
@@ -108,14 +108,14 @@ main .title .content svg {
   margin-bottom: 20px;
 }
 
-.staff_technique .les_coachs {
+.staff_technique .les_coachs, .les_coach_2 {
   font-family: sans-serif;
   text-align: center;
   border: 2px solid black;
   margin: 30px;
 }
 
-.staff_technique .les_coachs img {
+.staff_technique .les_coachs img, .les_coach_2 img{
   height: 272px;
   width: 250px;
   border-bottom: 2px solid black;
@@ -128,8 +128,23 @@ main .title .content svg {
   text-decoration: underline;
 }
 
-.staff_technique .les_coachs h3 {
+.staff_technique .les_coachs h3, .les_coach_2 {
   color: black;
   /* color: #DB0F00; */
   text-decoration: underline;
+}
+
+.staff_technique .les_coach_2{
+  height: 378.23px;
+}
+
+.staff_technique .les_coach_2 h2{
+  width: 250px;
+  color: #DB0F00;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.staff_technique .les_coach_2 {
+  padding-bottom: 20px;
 }
