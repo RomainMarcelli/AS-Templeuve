@@ -1,10 +1,11 @@
 *,
 *::before,
 *::after {
-  /* margin: 0;
+    /* margin: 0;
   padding: 0; */
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 /* 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
@@ -140,14 +141,14 @@ h1 {
 
 /* Histoire */
 
-.grid{
+.grid {
     margin: 10px 0 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.histoire{
+.histoire {
     margin: 100px;
     padding: 50px;
     color: black;
@@ -243,7 +244,7 @@ h1 {
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background: #f45b69;
+    background: #e82c1f;
 }
 
 .timeline ul li div::before {
@@ -262,7 +263,7 @@ h1 {
 .timeline ul li:nth-child(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #f45b69 transparent transparent;
+    border-color: transparent #e82c1f transparent transparent;
 }
 
 .timeline ul li:nth-child(even) div {
@@ -272,7 +273,7 @@ h1 {
 .timeline ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #f45b69;
+    border-color: transparent transparent transparent #e82c1f;
 }
 
 time {
@@ -287,7 +288,7 @@ time {
 }
 
 .timeline ul li.in-view::after {
-    background: #f45b69;
+    background: #e82c1f;
 }
 
 .timeline ul li div {
@@ -341,7 +342,7 @@ time {
     .timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent #f45b69 transparent transparent;
+        border-color: transparent #DB0F00 transparent transparent;
     }
 }
 
@@ -406,7 +407,7 @@ time {
 
 /* NOS INFOS */
 
-.infos{
+.infos {
     display: none;
 }
 
@@ -414,7 +415,7 @@ time {
     color: black;
 }
 
-.infos.visible{
+.infos.visible {
     display: block;
 }
 
@@ -423,11 +424,17 @@ time {
 
 /* Style de base pour la mise en page */
 
-.direction, .coachs, .dirigeant, .infra{
+.direction,
+.coachs,
+.dirigeant,
+.infra {
     display: none;
 }
 
-.direction.visible, .coachs.visible, .dirigeant.visible, .infra.visible{
+.direction.visible,
+.coachs.visible,
+.dirigeant.visible,
+.infra.visible {
     display: block;
 }
 
@@ -440,7 +447,8 @@ time {
 }
 
 /* Style pour chaque poste */
-.organisation h2,.organisation h3 {
+.organisation h2,
+.organisation h3 {
     /* border: 1px solid black; */
     padding: 10px;
     margin: 10px 0;
@@ -449,26 +457,46 @@ time {
     text-align: center;
 }
 
-.president, .vice_pre, .secrétaire, .trésorier, .membre_conseil, .secret_adjoint {
+.president,
+.vice_pre,
+.secrétaire,
+.trésorier,
+.membre_conseil,
+.secret_adjoint {
     position: relative;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 1.5) 1px 1px 22px;    /* Ajoute une ombre avec un flou de 10px */
+    box-shadow: rgba(0, 0, 0, 1.5) 1px 1px 22px;
+    /* Ajoute une ombre avec un flou de 10px */
 }
 
-.president h2, .vice_pre h2, .secrétaire h2, .trésorier h2, .membre_conseil h2, .secret_adjoint h2 {
+.president h2,
+.vice_pre h2,
+.secrétaire h2,
+.trésorier h2,
+.membre_conseil h2,
+.secret_adjoint h2 {
     margin: 0;
     text-decoration: underline;
 }
 
-.president h3, .vice_pre h3, .secrétaire h3, .trésorier h3, .membre_conseil h3, .secret_adjoint h3 {
+.president h3,
+.vice_pre h3,
+.secrétaire h3,
+.trésorier h3,
+.membre_conseil h3,
+.secret_adjoint h3 {
     margin: 0;
     text-transform: uppercase;
     color: #DB0F00;
 }
 
-.vice_pre img, .secrétaire img, .trésorier img, .membre_conseil img, .secret_adjoint  img{
+.vice_pre img,
+.secrétaire img,
+.trésorier img,
+.membre_conseil img,
+.secret_adjoint img {
     height: 272px;
     width: 250px;
 }
@@ -484,7 +512,9 @@ time {
     background-color: black;
 } */
 
-.secret_adj, .responsable, .vice_secret  {
+.secret_adj,
+.responsable,
+.vice_secret {
     width: 100%;
     display: flex;
     align-items: center;
@@ -492,7 +522,7 @@ time {
     margin: 10px 0;
 }
 
-hr{
+hr {
     height: 2px;
     width: 250px;
     color: black;
@@ -501,7 +531,7 @@ hr{
 
 
 
-.secrétaire .secrétaire_adj{
+.secrétaire .secrétaire_adj {
     display: none;
 }
 
@@ -513,13 +543,13 @@ hr{
     background-color: #DB0F00;
 }
 
-.coachs h1{
+.coachs h1 {
     color: white;
     text-align: center;
     padding: 35px;
 }
 
-.entraineur{
+.entraineur {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -531,16 +561,18 @@ hr{
     color: black;
     text-align: center;
 }
-.coachs h3{
+
+.coachs h3 {
     color: #DB0F00;
     text-align: center;
 }
+
 .coachs h4 {
     color: deepskyblue;
     text-align: center;
 }
 
-.coachs img{
+.coachs img {
     height: 272px;
     width: 250px;
     border-radius: 16px 16px 0 0;
@@ -550,7 +582,7 @@ hr{
     background-color: white;
 }
 
-.les_coachs{
+.les_coachs {
     margin: 15px;
     border: 2px solid white;
     background-color: white;
@@ -567,12 +599,12 @@ hr{
     text-decoration: underline;
 }
 
-.dirigeant .all_dirigeant h2{
+.dirigeant .all_dirigeant h2 {
     color: white;
     text-align: center;
 }
 
-.dirigeant .all_dirigeant{
+.dirigeant .all_dirigeant {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -580,13 +612,14 @@ hr{
 }
 
 .dirigeant h1 {
-  font-size: 2.2em;
-  text-align: center;
+    font-size: 2.2em;
+    text-align: center;
 }
 
 /* // base */
 .dirigeant .flip {
     position: relative;
+
     >.front,
     >.back {
         display: block;
@@ -594,9 +627,11 @@ hr{
         transition-duration: .5s;
         transition-property: transform, opacity;
     }
+
     >.front {
         transform: rotateY(0deg);
     }
+
     >.back {
         position: absolute;
         opacity: 0;
@@ -606,23 +641,28 @@ hr{
         height: 100%;
         transform: rotateY(-180deg);
     }
+
     &:hover {
         >.front {
             transform: rotateY(180deg);
         }
+
         >.back {
             opacity: 1;
             transform: rotateY(0deg);
         }
     }
+
     &.flip-vertical {
         >.back {
             transform: rotateX(-180deg);
         }
+
         &:hover {
             >.front {
                 transform: rotateX(180deg);
             }
+
             >.back {
                 transform: rotateX(0deg);
             }
@@ -636,37 +676,40 @@ hr{
     display: inline-block;
     margin-right: 2px;
     margin-bottom: 4em;
-    height: 272px;
+    /* height: 272px; */
     width: 250px;
+
     >.front,
     >.back {
-      display: block;
-      color: white;
-      width: inherit;
-      background-size: cover!important;
-      background-position: center!important;
-      height:  320px;;
-      padding: 1em 2em;
-      background: #DB0F00;
-      border-radius: 10px;
-      p {
-        font-size: 0.9125rem;
-        line-height: 160%;
+        display: block;
         color: white;
-      }
+        width: inherit;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 251px;
+        width: 206px;
+        padding: 1em 2em;
+        background: #DB0F00;
+        border-radius: 10px;
+
+        p {
+            font-size: 0.9125rem;
+            line-height: 160%;
+            color: white;
+        }
     }
 }
 
 .dirigeant .text-shadow {
-text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
+
 /* FLIP CARD */
 
 
 /* LES INFRASTRUCTURES */
 
-.infra img{
+.infra img {
     width: 300px;
     height: 350px;
 }
-
