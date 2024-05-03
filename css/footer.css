@@ -37,7 +37,7 @@
     margin-top: 8px;
 }
 
-.footer a {
+.footer .liens a, footer .info a {
     color: white;
     font-family: sans-serif;
 }
@@ -68,12 +68,21 @@
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.footer .wrapper .icon .link_facebok{
+    color: black;
+}
+
+.footer .icon.facebook:hover .link_facebok {
+    color: white;
+}
+
 .footer .wrapper .tooltip {
     position: absolute;
     top: 0;
     font-size: 14px;
     background: #ffffff;
     color: #ffffff;
+    font-family: sans-serif;
     padding: 5px 8px;
     border-radius: 5px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -111,6 +120,7 @@
 .footer .wrapper .facebook:hover .tooltip::before {
     background: #1877F2;
     color: #ffffff;
+    font-family: sans-serif;
 }
 
 .footer .wrapper .twitter:hover,
@@ -118,6 +128,7 @@
 .footer .wrapper .twitter:hover .tooltip::before {
     background: #1DA1F2;
     color: #ffffff;
+    font-family: sans-serif;
 }
 
 .footer .wrapper .instagram:hover,
@@ -125,6 +136,7 @@
 .footer .wrapper .instagram:hover .tooltip::before {
     background: #E4405F;
     color: #ffffff;
+    font-family: sans-serif;
 }
 
 .footer .wrapper .tiktok:hover,
@@ -132,6 +144,7 @@
 .footer .wrapper .tiktok:hover .tooltip::before {
     background: #333333;
     color: #ffffff;
+    font-family: sans-serif;
 }
 
 .footer .wrapper .youtube:hover,
@@ -139,4 +152,5 @@
 .footer .wrapper .youtube:hover .tooltip::before {
     background: #CD201F;
     color: #ffffff;
+    font-family: sans-serif;
 }

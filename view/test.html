@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier l'actualité</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <div class="container">
+        <h1>Modifier l'actualité</h1>
+        <form id="announcement-form">
+            <label for="announcement-text">Texte de l'annonce :</label>
+            <textarea id="announcement-text" name="announcement-text" rows="4" cols="50"></textarea>
+            <button type="submit">Modifier</button>
+        </form>
+    </div>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function () {
+            // Récupérer la div d'annonce et le formulaire
+            var announcementDiv = document.querySelector('.announcement-bar p');
+            var form = document.getElementById('announcement-form');
+
+            // Remplir le textarea avec le texte actuel de l'annonce
+            var announcementText = announcementDiv.textContent.trim();
+            document.getElementById('announcement-text').value = announcementText;
+
+            // Écouter l'événement de soumission du formulaire
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Empêcher le comportement par défaut du formulaire
+
+                // Mettre à jour le texte de l'annonce avec celui du formulaire
+                var newText = form['announcement-text'].value;
+                announcementDiv.textContent = newText;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
