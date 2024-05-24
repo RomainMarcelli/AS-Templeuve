@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualitées</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/club.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="js/header.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <style>
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            max-width: 660px;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: inherit;
+            transition: 0.5s ease-in-out;
+        }
+    </style>
+
+    <header>
+        <nav id="navbar" class="nav">
+
+            <ul class="menu_burger">
+                <li>
+                    <a href="#">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu'
+                            alt='Burger Menu' onclick="toggleMenu()">
+                        <span id="menuText">Menu</span>
+                        <span id="menuFermer" style="display: none;">Fermer</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu_logo">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="club.html">Le club</a></li>
+                <li class="logo-container">
+                    <a href="index.html">
+                        <span class="logo-parallelogram">
+                            <img class="logo" src="img/logo.png" alt="Logo" height="120px" width="100px">
+                        </span>
+                    </a>
+                </li>
+                <li><a href="equipe.html">Équipes</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La Boutique</a></li>
+            </ul>
+            <ul class="menu_contact">
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="navigation">
+                <li><a href="#" target="_blank">Actualités</a></li>
+                <li><a href="equipe.html" target="_blank">Equipes</a></li>
+                <li><a href="club.html" target="_blank">Le club</a></li>
+                <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La boutique</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="#" target="_blank">Evènements</a></li>
+                <li><a href="#" target="_blank">Compétition</a></li>
+                <li><a href="#" target="_blank">Le staff</a></li>
+                <li><a href="#" target="_blank">Le stade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="img/tournoi_11.JPG" alt="">
+                    <div class="content">
+                        <h2>Tournoi U11</h2>
+                        <p>Samedi 20 Mai au Complexe Sportif Jean-Pierre Félix. 12 Equipes présentent, Tournoi toute la
+                            journée
+                            avec restauration sur place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer">
+            <div class="logo_icon">
+                <img src="img/logo dim.png" alt="Logo AST">
+                <ul class="wrapper">
+                    <li class="icon facebook" id="facebookIcon">
+                        <span class="tooltip">Facebook</span>
+                        <span class="logo_social"><i class="fab fa-facebook-f"></i></span>
+                    </li>
+                    <li class="icon twitter" id="twitterIcon">
+                        <span class="tooltip">Twitter</span>
+                        <span class="logo_social"><i class="fab fa-twitter"></i></span>
+                    </li>
+                    <li class="icon instagram" id="instagramIcon">
+                        <span class="tooltip">Instagram</span>
+                        <span class="logo_social"><i class="fab fa-instagram"></i></span>
+                    </li>
+                    <li class="icon tiktok" id="tiktokIcon">
+                        <span class="tooltip">Tik Tok</span>
+                        <span class="logo_social"><i class="fab fa-tiktok"></i></span>
+                    </li>
+                    <li class="icon youtube" id="youtubeIcon">
+                        <span class="tooltip">Youtube</span>
+                        <span class="logo_social"><i class="fab fa-youtube"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="liens">
+                <ul>
+                    <h3>liens Utiles</h3>
+                    <li><a href="#">Notre Actualités</a></li>
+                    <li><a href="equipe.html">Nos équipes</a></li>
+                    <li><a href="club.html">Le club</a></li>
+                    <li><a href="https://team.jako.fr/fr/team/as_templeuve/">La boutique</a></li>
+                    <li><a href="#">Nos partenaires</a></li>
+                </ul>
+            </div>
+            <div class="info">
+
+                <ul>
+                    <h3>Informations</h3>
+                    <li><a href="club.html">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
