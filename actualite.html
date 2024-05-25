@@ -291,10 +291,10 @@
     </footer>
 
     <script>
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const newsContainer = document.getElementById('newsContainer');
-        //     const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-        //     console.log('News List:', newsList);
+        document.addEventListener('DOMContentLoaded', function () {
+            // const newsContainer = document.getElementById('newsContainer');
+            // const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            // console.log('News List:', newsList);
 
         //     newsList.forEach(news => {
         //         const newsElement = document.createElement('div');
@@ -314,13 +314,13 @@
         //         newsContainer.innerHTML = '<p>Aucune actualité disponible.</p>';
         //     }
 
-        //     // Gestion du clic sur les images pour afficher en plein écran
-        //     document.querySelectorAll('#newsContainer img').forEach(img => {
-        //         img.addEventListener('click', function () {
-        //             openFullscreen(this.src);
-        //         });
-        //     });
-        // });
+            // Gestion du clic sur les images pour afficher en plein écran
+            document.querySelectorAll('#newsContainer img').forEach(img => {
+                img.addEventListener('click', function () {
+                    openFullscreen(this.src);
+                });
+            });
+        });
 
         function openFullscreen(src) {
             const fullscreenContainer = document.getElementById('fullscreenContainer');
