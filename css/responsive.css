@@ -1,0 +1,39 @@
+@media (max-width: 920px) {
+    .menu_logo li a {
+        display: none;
+    }
+
+    .menu_logo  .logo-container a {
+        display: block;
+    }
+
+    main .senior .stat {
+        display: flex;
+        width: 98%;
+        flex-direction: column;
+    }
+
+    .nav_classement {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1065px) {
+    .row{
+        flex-direction: column;
+    }
+}
+@media (max-width: 860px) {
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer ul {
+        padding: 0;
+    }
+}
+@media (max-width: 620px) {
+    #twitterIcon, #instagramIcon, #tiktokIcon, #youtubeIcon {
+        display: none;
+    }
+}

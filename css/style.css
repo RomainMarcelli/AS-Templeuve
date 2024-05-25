@@ -203,6 +203,7 @@ marquee {
 
 main .senior .stat {
     display: flex;
+    width: 98%;
 }
 
 main .senior .stat iframe {
