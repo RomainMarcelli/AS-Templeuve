@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
-    <script src="js/header.js"></script>
+    <script src="js/header.js" defer></script>
     <script src="js/script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
@@ -111,6 +111,10 @@
             font-size: 1.2em;
             border-radius: 50%;
             width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -121,8 +125,7 @@
             <ul class="menu_burger">
                 <li>
                     <a href="#">
-                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu'
-                            alt='Burger Menu' onclick="toggleMenu()">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu' alt='Burger Menu' onclick="toggleMenu()">
                         <span id="menuText">Menu</span>
                         <span id="menuFermer" style="display: none;">Fermer</span>
                     </a>
@@ -160,12 +163,10 @@
         <div class="title">
             <div class="content">
                 <h1>L'Actualités de l'AS TEMPLEUVE</h1>
-                <h3>Vivez chaque moment de l'AS Templeuve ! Restez à jour avec les dernières nouvelles, résultats, et
-                    événements de votre club de cœur.</h3>
+                <h3>Vivez chaque moment de l'AS Templeuve ! Restez à jour avec les dernières nouvelles, résultats, et événements de votre club de cœur.</h3>
                 <a href="#test">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path
-                            d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                     </svg>
                 </a>
             </div>
@@ -237,6 +238,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const newsContainer = document.getElementById('newsContainer');
             const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            console.log('News List:', newsList);
 
             newsList.forEach(news => {
                 const newsElement = document.createElement('div');
@@ -276,9 +278,6 @@
             const fullscreenContainer = document.getElementById('fullscreenContainer');
             fullscreenContainer.classList.remove('active');
         }
-        document.getElementById("facebookIcon").addEventListener("click", function () {
-            window.location.href = "https://www.facebook.com/groups/458338641019931/";
-        });
     </script>
 </body>
 
