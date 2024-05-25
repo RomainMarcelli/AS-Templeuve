@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualités</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/Favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/Favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/Favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
@@ -125,7 +125,8 @@
             <ul class="menu_burger">
                 <li>
                     <a href="#">
-                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu' alt='Burger Menu' onclick="toggleMenu()">
+                        <img class="menu-icon" src="img/burger-menu.svg" width="51px" title='Burger Menu'
+                            alt='Burger Menu' onclick="toggleMenu()">
                         <span id="menuText">Menu</span>
                         <span id="menuFermer" style="display: none;">Fermer</span>
                     </a>
@@ -163,10 +164,12 @@
         <div class="title">
             <div class="content">
                 <h1>L'Actualités de l'AS TEMPLEUVE</h1>
-                <h3>Vivez chaque moment de l'AS Templeuve ! Restez à jour avec les dernières nouvelles, résultats, et événements de votre club de cœur.</h3>
+                <h3>Vivez chaque moment de l'AS Templeuve ! Restez à jour avec les dernières nouvelles, résultats, et
+                    événements de votre club de cœur.</h3>
                 <a href="#test">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                        <path
+                            d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
                     </svg>
                 </a>
             </div>
@@ -214,7 +217,7 @@
             </div>
             <div class="liens">
                 <ul>
-                    <h3>Liens Utiles</h3>
+                    <h3>liens Utiles</h3>
                     <li><a href="#">Notre Actualités</a></li>
                     <li><a href="equipe.html">Nos équipes</a></li>
                     <li><a href="club.html">Le club</a></li>
@@ -223,6 +226,7 @@
                 </ul>
             </div>
             <div class="info">
+
                 <ul>
                     <h3>Informations</h3>
                     <li><a href="club.html">Qui sommes-nous ?</a></li>
@@ -245,11 +249,11 @@
                 newsElement.className = 'news';
 
                 newsElement.innerHTML = `
-                    <h2>${news.title}</h2>
-                    <p class="date">Publié le : ${news.date}</p>
-                    <p>${news.description}</p>
-                    <img src="${news.imageUrl}" alt="Image de l'actualité">
-                `;
+                <h2>${news.title}</h2>
+                <p class="date">Publié le : ${news.date}</p>
+                <p>${news.description}</p>
+                <img src="${news.imageUrl}" alt="Image de l'actualité">
+            `;
 
                 newsContainer.appendChild(newsElement);
             });
@@ -279,6 +283,7 @@
             fullscreenContainer.classList.remove('active');
         }
     </script>
+
 </body>
 
 </html>
