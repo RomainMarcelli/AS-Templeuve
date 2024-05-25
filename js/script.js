@@ -124,3 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     showIframe('6597e8e313509708cbfbf558');
 });
 
+function redirectToActualites() {
+    window.location.href = "actualite.html";
+}
+
