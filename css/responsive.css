@@ -37,3 +37,15 @@
         display: none;
     }
 }
+
+@media (max-width: 400px) {
+    main .title h1{
+        margin-top: 0;
+        font-size: 40px;
+    }
+
+    main .title img {
+        margin: 27px auto;
+    }
+}
+
