@@ -556,3 +556,25 @@ main .title-container h1:hover {
     position: absolute;
     display: flex;
 }
+
+/* Pour les sponsors */
+
+#smf a, #quatreL a, #barackfrite a{
+    display: flex;
+    justify-content: center;
+}
+
+#smf img{
+    height: 36vh;
+    width: 55%;
+}
+
+#quatreL img{
+    height: 37vh;
+    width: 44%;
+}
+
+#barackfrite img{
+    height: 37vh;
+    width: 42%;
+}
