@@ -46,3 +46,25 @@
   window.addEventListener("resize", animateTimeline);
   window.addEventListener("scroll", animateTimeline);
 })();
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Gestion du clic sur l'image pour afficher en plein écran
+    const imageToEnlarge = document.getElementById('imageToEnlarge');
+    imageToEnlarge.addEventListener('click', function () {
+        openFullscreen(this.src);
+    });
+});
+
+function openFullscreen(src) {
+    const fullscreenContainer = document.getElementById('fullscreenContainer');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+
+    fullscreenImage.src = src;
+    fullscreenContainer.classList.add('active');
+}
+
+function closeFullscreen() {
+    const fullscreenContainer = document.getElementById('fullscreenContainer');
+    fullscreenContainer.classList.remove('active');
+}

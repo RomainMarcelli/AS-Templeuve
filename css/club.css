@@ -427,14 +427,16 @@ time {
 .direction,
 .coachs,
 .dirigeant,
-.infra {
+.infra,
+.calendrier {
     display: none;
 }
 
 .direction.visible,
 .coachs.visible,
 .dirigeant.visible,
-.infra.visible {
+.infra.visible,
+.calendrier.visible {
     display: block;
 }
 
@@ -471,6 +473,64 @@ time {
     /* Ajoute une ombre avec un flou de 10px */
 }
 
+.calendrier h1 {
+    color: #DB0F00;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.calendrier .newsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    cursor: pointer;
+}
+
+/* PAGE CALENDRIER  */
+
+
+#fullscreenContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#fullscreenContainer.active {
+    display: flex;
+}
+
+#fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#fullscreenContainer button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #DB0F00;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .president h2,
 .vice_pre h2,
 .secrétaire h2,
@@ -492,6 +552,7 @@ time {
     color: #DB0F00;
 }
 
+.president img,
 .vice_pre img,
 .secrétaire img,
 .trésorier img,
