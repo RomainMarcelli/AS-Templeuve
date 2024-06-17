@@ -109,6 +109,7 @@ marquee {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .swiper-slide img {
@@ -203,6 +204,7 @@ marquee {
 
 main .senior .stat {
     display: flex;
+    width: 98%;
 }
 
 main .senior .stat iframe {
@@ -231,24 +233,29 @@ main .btn a:hover {
     background-color: #DB0F00;
 }
 
-.nav_classement{
+.nav_classement {
     display: flex;
     width: 50%;
     flex-direction: column;
 }
 
 .navbar {
-    overflow-x: scroll; /* Ajout de la scrollbar horizontale */
-    overflow-y: hidden; /* Masquage de la scrollbar verticale */
-    white-space: nowrap; /* Permet aux éléments de rester sur une seule ligne */
+    overflow-x: scroll;
+    /* Ajout de la scrollbar horizontale */
+    overflow-y: hidden;
+    /* Masquage de la scrollbar verticale */
+    white-space: nowrap;
+    /* Permet aux éléments de rester sur une seule ligne */
     background-color: #F9FAFB;
-    width: 100%; /* Force la barre de navigation à occuper toute la largeur */
+    width: 100%;
+    /* Force la barre de navigation à occuper toute la largeur */
     height: 53.67px;
     margin-top: 11px;
 }
 
 .navbar a {
-    display: inline-block; /* Affiche les liens en ligne les uns à côté des autres */
+    display: inline-block;
+    /* Affiche les liens en ligne les uns à côté des autres */
     text-decoration: none;
     text-align: center;
     padding: .5rem .75rem;
@@ -513,18 +520,18 @@ main .img_boutique img {
     width: 100%;
 }
 
-main .title-container a{
+main .title-container a {
     text-decoration: none;
 }
 
-main .title-container h1:hover{
+main .title-container h1:hover {
     color: white;
     background-color: #DB0F00;
 }
 
-.link_partenaire{
+.link_partenaire {
     position: relative;
-    z-index: 1;    
+    z-index: 1;
 }
 
 
@@ -548,4 +555,26 @@ main .title-container h1:hover{
     top: 74%;
     position: absolute;
     display: flex;
+}
+
+/* Pour les sponsors */
+
+#smf a, #quatreL a, #barackfrite a{
+    display: flex;
+    justify-content: center;
+}
+
+#smf img{
+    height: 36vh;
+    width: 55%;
+}
+
+#quatreL img{
+    height: 37vh;
+    width: 44%;
+}
+
+#barackfrite img{
+    height: 37vh;
+    width: 42%;
 }
