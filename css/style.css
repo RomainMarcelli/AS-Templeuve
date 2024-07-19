@@ -199,6 +199,24 @@ marquee {
 }
 
 
+/* Image Actualité */
+
+.image_container {
+    /* Définir la hauteur souhaitée */
+    overflow: hidden;
+    /* Masquer les parties de l'image qui débordent */
+}
+
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* L'image couvre entièrement le conteneur */
+    object-position: center;
+    /* Positionner l'image au centre du conteneur */
+}
+
+
 /* FIN CARROUSSEL */
 
 
@@ -559,22 +577,24 @@ main .title-container h1:hover {
 
 /* Pour les sponsors */
 
-#smf a, #quatreL a, #barackfrite a{
+#smf a,
+#quatreL a,
+#barackfrite a {
     display: flex;
     justify-content: center;
 }
 
-#smf img{
+#smf img {
     height: 36vh;
     width: 55%;
 }
 
-#quatreL img{
+#quatreL img {
     height: 37vh;
     width: 44%;
 }
 
-#barackfrite img{
+#barackfrite img {
     height: 37vh;
     width: 42%;
 }

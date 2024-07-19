@@ -651,6 +651,19 @@ hr {
     border-radius: 15px;
 }
 
+.img_container_coach {
+    height: 272px;
+    width: 250px; /* Définir la hauteur souhaitée */
+    overflow: hidden; /* Masquer les parties de l'image qui débordent */
+}
+
+.img_container_coach img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image couvre entièrement le conteneur */
+    object-position: center; /* Positionner l'image au centre du conteneur */
+}
+
 
 /* LES DIRIGEANTS */
 
