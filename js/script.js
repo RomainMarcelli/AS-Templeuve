@@ -13,7 +13,7 @@ var swiper = new Swiper(".swiper", {
         prevEl: ".swiper-button-prev",
     },
     autoplay: {
-        delay: 3000, // Temps en millisecondes entre chaque transition (par exemple, 3000 pour 3 secondes)
+        delay: 600000000, // Temps en millisecondes entre chaque transition (par exemple, 3000 pour 3 secondes)
         disableOnInteraction: false, // Permet de continuer l'autoplay même si l'utilisateur interagit avec la slide
     },
     breakpoints: {
@@ -117,6 +117,10 @@ function showIframe(id) {
 
 document.getElementById("facebookIcon").addEventListener("click", function() {
     window.location.href = "https://www.facebook.com/groups/458338641019931/";
+});
+
+document.getElementById("instagramIcon").addEventListener("click", function() {
+    window.location.href = "https://www.instagram.com/as_templeuve/";
 });
 
 // Appeler showIframe lorsque la page se charge

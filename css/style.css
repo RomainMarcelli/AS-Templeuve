@@ -495,7 +495,29 @@ main .equipe a:hover {
     align-items: center;
 }
 
+.partenaire .swiper-slide {
+    width: 100%;
+    max-width: 660px; /* Taille maximale du conteneur */
+    height: auto;
+    aspect-ratio: 16/9; /* Ratio d'aspect pour toutes les images */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .partenaire .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Adapte l'image à l'intérieur du conteneur sans couper */
+    border-radius: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+/* .partenaire .swiper-slide img {
     display: block;
     width: 100%;
     max-width: 660px;
@@ -503,7 +525,7 @@ main .equipe a:hover {
     object-fit: cover;
     border-radius: inherit;
     transition: 0.5s ease-in-out;
-}
+} */
 
 .partenaire .swiper {
     --swiper-theme-color: #DB0F00;
@@ -598,3 +620,4 @@ main .title-container h1:hover {
     height: 37vh;
     width: 42%;
 }
+

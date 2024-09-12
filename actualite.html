@@ -135,6 +135,61 @@
             object-position: center;
             /* Positionner l'image au centre du conteneur */
         }
+
+        .news {
+            display: none;
+            /* On cache les articles par défaut */
+        }
+
+        #paginationControls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* #paginationControls button{
+            border: 0;
+            background-color: transparent;
+            color: #DB0F00;
+            padding: 0 40px;
+        } */
+
+        #paginationControls {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        #paginationControls button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #paginationControls button.active {
+            background-color: #DB0F00;
+            /* Rouge pour le bouton actif */
+            color: #fff;
+            /* Texte blanc pour le bouton actif */
+            border: 1px solid #DB0F00;
+            /* Bordure rouge pour le bouton actif */
+        }
+
+        #paginationControls button:hover:not(.active) {
+            background-color: #DB0F00;
+            /* Rouge pour le survol, mais uniquement si ce n'est pas le bouton actif */
+            color: #fff;
+            /* Texte blanc pour le survol */
+        }
+
+        #paginationControls button:focus {
+            outline: none;
+        }
     </style>
 </head>
 
@@ -227,7 +282,7 @@
                     <img src="img/actualite/ancien_president.jpg" alt="">
                 </div>
             </div>
-            
+
             <div class="news">
                 <h2>Recrutement Baby</h2>
                 <p class="date">Publié le: 25.05.2024</p>
@@ -241,18 +296,18 @@
                 <p class="date">Publié le: 25.05.2024</p>
                 <p>L'AS Templeuve recrute pour la saison 2024 / 2025 des joueurs séniors
                     Contactez nous au : 06.60.49.06.73</p>
-                    <div class="image-container">
-                        <img src="img/recrutement/seniors.jpg" alt="">
-                    </div>
+                <div class="image-container">
+                    <img src="img/recrutement/seniors.jpg" alt="">
+                </div>
             </div>
             <div class="news">
                 <h2>Recrutement U14-U17</h2>
                 <p class="date">Publié le: 25.05.2024</p>
                 <p>L'AS Templeuve recrute pour la saison 2024 / 2025 des futures joueurs U14.U15.U16.U17
                     Contactez nous au : 06.60.49.06.73</p>
-                    <div class="image-container">
-                        <img src="img/recrutement/all.jpg" alt="">
-                    </div>
+                <div class="image-container">
+                    <img src="img/recrutement/all.jpg" alt="">
+                </div>
             </div>
             <div class="news">
                 <h2>Recrutement U10-U13</h2>
@@ -281,12 +336,16 @@
                 <p class="date">Publié le: 25.05.2024</p>
                 <p>Les U6 / U7 de L'AS Templeuve inaugurent le city stade en présence de Luc MONNET, Maire de
                     Templeuve-en-Pévèle</p>
-                    <div class="image-container">
+                <div class="image-container">
 
-                        <img src="img/inaufuration.JPG" alt="">
-                    </div>
+                    <img src="img/inaufuration.JPG" alt="">
+                </div>
             </div>
         </div>
+        <!-- <div id="paginationControls"></div> -->
+        <div id="paginationControls">
+        </div>
+
     </main>
 
     <!-- Conteneur pour l'image en plein écran -->
@@ -304,28 +363,16 @@
                         <span class="tooltip">Facebook</span>
                         <span class="logo_social"><i class="fab fa-facebook-f"></i></span>
                     </li>
-                    <li class="icon twitter" id="twitterIcon">
-                        <span class="tooltip">Twitter</span>
-                        <span class="logo_social"><i class="fab fa-twitter"></i></span>
-                    </li>
                     <li class="icon instagram" id="instagramIcon">
                         <span class="tooltip">Instagram</span>
                         <span class="logo_social"><i class="fab fa-instagram"></i></span>
-                    </li>
-                    <li class="icon tiktok" id="tiktokIcon">
-                        <span class="tooltip">Tik Tok</span>
-                        <span class="logo_social"><i class="fab fa-tiktok"></i></span>
-                    </li>
-                    <li class="icon youtube" id="youtubeIcon">
-                        <span class="tooltip">Youtube</span>
-                        <span class="logo_social"><i class="fab fa-youtube"></i></span>
                     </li>
                 </ul>
             </div>
             <div class="liens">
                 <ul>
                     <h3>liens Utiles</h3>
-                    <li><a href="#">Notre Actualités</a></li>
+                    <li><a href="actualite.html">Notre Actualités</a></li>
                     <li><a href="equipe.html">Nos équipes</a></li>
                     <li><a href="club.html">Le club</a></li>
                     <li><a href="https://team.jako.fr/fr/team/as_templeuve/">La boutique</a></li>
@@ -389,6 +436,71 @@
             const fullscreenContainer = document.getElementById('fullscreenContainer');
             fullscreenContainer.classList.remove('active');
         }
+
+        // Nombre d'articles à afficher par page
+        const articlesPerPage = 4;
+
+        // Récupérer tous les articles
+        const articles = document.querySelectorAll('.news');
+        const totalArticles = articles.length;
+        const totalPages = Math.ceil(totalArticles / articlesPerPage);
+
+        // Conteneur pour les contrôles de pagination
+        const paginationControls = document.getElementById('paginationControls');
+
+        // Fonction pour afficher une page d'articles
+        function displayPage(page) {
+            // Masquer tous les articles
+            articles.forEach(article => article.style.display = 'none');
+
+            // Calculer les indices des articles à afficher
+            const start = (page - 1) * articlesPerPage;
+            const end = Math.min(start + articlesPerPage, totalArticles);
+
+            // Afficher les articles pour la page actuelle
+            for (let i = start; i < end; i++) {
+                articles[i].style.display = 'block';
+            }
+
+            // Mettre à jour l'état actif des boutons de pagination
+            updateActiveButton(page);
+        }
+
+        // Fonction pour créer les boutons de pagination
+        function createPaginationControls() {
+            paginationControls.innerHTML = ''; // Vider les contrôles actuels
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.addEventListener('click', function () {
+                    displayPage(i);
+                });
+                paginationControls.appendChild(button);
+            }
+        }
+
+        // Fonction pour mettre à jour l'état actif des boutons
+        function updateActiveButton(activePage) {
+            // Récupérer tous les boutons de pagination
+            const buttons = paginationControls.querySelectorAll('button');
+
+            // Supprimer la classe active de tous les boutons
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Ajouter la classe active au bouton correspondant à la page active
+            buttons[activePage - 1].classList.add('active');
+        }
+
+        // Initialisation
+        createPaginationControls();
+        displayPage(1); // Afficher la première page au chargement
+
+
+
+
     </script>
 
 </body>
