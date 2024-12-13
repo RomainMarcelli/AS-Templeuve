@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Le Club De L'AS Templeuve</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/Favicon/favicon-16x16.png">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/club.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="js/header.js" defer></script>
@@ -50,15 +54,15 @@
             </ul>
 
             <ul class="navigation">
-                <li><a href="#" target="_blank">Actualités</a></li>
+                <li><a href="actualite.html" target="_blank">Actualités</a></li>
                 <li><a href="equipe.html" target="_blank">Equipes</a></li>
                 <li><a href="club.html" target="_blank">Le club</a></li>
                 <li><a href="https://team.jako.fr/fr/team/as_templeuve/" target="_blank">La boutique</a></li>
                 <li><a href="contact.html" target="_blank">Contact</a></li>
                 <li><a href="#" target="_blank">Evènements</a></li>
-                <li><a href="#" target="_blank">Compétition</a></li>
+                <!-- <li><a href="#" target="_blank">Compétition</a></li>
                 <li><a href="#" target="_blank">Le staff</a></li>
-                <li><a href="#" target="_blank">Le stade</a></li>
+                <li><a href="#" target="_blank">Le stade</a></li> -->
             </ul>
         </nav>
     </header>
@@ -91,7 +95,7 @@
             <a href="#" class="histoire">Notre Histoire</a>
         </section> -->
 
-        
+
         <div id="test"></div>
         <section class="grid" id="histoireSection">
             <a class="button" href="#" id="directionButton" data-target="directionSection">
@@ -116,6 +120,12 @@
                 <svg height="60" width="300" xmlns="http://www.w3.org/2000/svg">
                     <rect class="shape" height="60" width="300" />
                     <div class="text">Notre Histoire</div>
+                </svg>
+            </a>
+            <a class="button" href="#" id="calendrierButton" data-target="calendrierSection">
+                <svg height="60" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="300" />
+                    <div class="text">Entraînements</div>
                 </svg>
             </a>
             <!-- <a class="button" href="#" id="infosButton" data-target="infosSection">
@@ -234,8 +244,8 @@
 
             <div class="organisation">
                 <div class="president">
-                    <img src="img/Personnel/gaetan-chretien__rxwen6.png" alt="Photo Président">
-                    <h2>Gaetan Chrétien</h2>
+                    <img src="img/coachs/mickael-dumont__s01m4s.jpg" alt="Photo Président">
+                    <h2>Mickael Dumont</h2>
                     <h3>Président</h3>
                 </div>
                 <!-- <br> -->
@@ -245,55 +255,49 @@
                         <h2>Didier Maes</h2>
                         <h3>Vice-Président</h3>
                     </div>
-                    <!-- <hr> -->
-                    <div class="secrétaire">
-                        <img src="img/Personnel/audrey-chretien-rappasse__rxwen7.png" alt="Secrétaire Générale">
-                        <h2>Audrey Chrétien</h2>
-                        <h3>Secrétaire Générale</h3>
+                    <div class="trésorier">
+                        <img src="img/Personnel/bertrand-nouges (1).jpg" alt="Trésorier">
+                        <h2>Bertrand Nougues</h2>
+                        <h3>Trésorier</h3>
                     </div>
                 </div>
                 <!-- <br> -->
 
                 <div class="secret_adj">
-                    <div class="trésorier">
-                        <img src="img/Personnel/bertrand-nouges__s1156f.png" alt="Trésorier">
-                        <h2>Bertrand Nouges</h2>
-                        <h3>Trésorier</h3>
+                    <div class="secret_adjoint">
+                        <img src="img/Personnel/greg dulompont.jpg" alt="Secrétaire Adjoint">
+                        <h2>Gregory Dulompont</h2>
+                        <h3>Secrétaire </h3>
                     </div>
                     <div class="secret_adjoint">
-                        <img src="img/Personnel/greg-dulompont__rzs605.jpg" alt="Secrétaire Adjoint">
-                        <h2>Greg Dulompont</h2>
-                        <h3>Secrétaire Adjoint</h3>
-                    </div>
-                    <div class="secret_adjoint">
-                        <img src="img/Personnel/xavier-degand__s033xj.jpg" alt="Secrétaire Adjoint">
+                        <img src="img/Personnel/xavier degand.jpg" alt="Secrétaire Adjoint">
                         <h2>Xavier Degand</h2>
-                        <h3>Secrétaire Adjoint</h3>
+                        <h3>Secrétaire</h3>
+                    </div>
+                    <div class="membre_conseil">
+                        <img src="img/Personnel/christian-marcelli__s1156f.jpg"
+                            alt="Membre du Conseil d'administration">
+                        <h2>Christian Marcelli</h2>
+                        <h3>Communication</h3>
                     </div>
                 </div>
                 <div class="responsable">
                     <!-- <hr> -->
                     <!-- <div class="membre_conseil"> -->
                     <div class="membre_conseil">
-                        <img src="img/Personnel/christian-marcelli__s1156f.jpg"
-                            alt="Membre du Conseil d'administration">
-                        <h2>Christian Marcelli</h2>
-                        <h3>Membre Conseil</h3>
-                    </div>
-                    <div class="membre_conseil">
                         <img src="img/Personnel/adrien-loock__s1156f.jpg" alt="Membre du Conseil d'administration">
                         <h2>Adrien Loock</h2>
-                        <h3>Membre Conseil</h3>
+                        <h3>Sponsoring</h3>
                     </div>
                     <div class="membre_conseil">
-                        <img src="img/Personnel/aurelien-lestriez__s1156e.jpg" alt="Membre du Conseil d'administration">
-                        <h2>Aurelien Lestriez</h2>
-                        <h3>Membre Conseil</h3>
+                        <img src="img/coachs/david-minet__s1156f.jpg" alt="Membre du Conseil d'administration">
+                        <h2>David Minet</h2>
+                        <h3>Sponsoring</h3>
                     </div>
                     <div class="membre_conseil">
-                        <img src="img/Personnel/elodie-rappasse__s1156f.jpg" alt="Membre du Conseil d'administration">
-                        <h2>Elodie Rappasse</h2>
-                        <h3>Membre Conseil</h3>
+                        <img src="img/coachs/julien-carneau__s01lnz.jpg" alt="Responsable formation Baby – U13">
+                        <h2>Julien Carneau</h2>
+                        <h3>Responsable formation Baby – U13</h3>
                     </div>
                 </div>
             </div>
@@ -326,7 +330,7 @@
             <h1>Les Coachs de L'AS Templeuve</h1>
             <div class="entraineur">
 
-                <div class="les_coachs">
+                <!-- <div class="les_coachs">
                     <img src="img/Personnel/jean-marie-blas__rdim3y.jpg" alt="Entraineur Adjoint">
                     <h2>Jean-Marie Blas</h2>
                     <h3>Entraineur Adjoint</h3>
@@ -337,68 +341,68 @@
                     <h2>Ludovic Bonnel</h2>
                     <h3>Entraineur Adjoint</h3>
                     <h4>(U12 Niveau 1 Poule J)</h4>
-                </div>
+                </div> -->
                 <div class="les_coachs">
                     <img src="img/coachs/julien-carneau__s01lnz.jpg" alt="Entraineur">
                     <h2>Julien Carneau</h2>
                     <h3>Entraineur</h3>
-                    <h4>(U10 Niveau 1 Poule I)</h4>
+                    <h4>U11</h4>
                 </div>
                 <div class="les_coachs">
                     <img src="img/coachs/edgard-chacornac__s01nax.jpg" alt="Educateur">
                     <h2>Edgar Chacornac</h2>
                     <h3>Educateur</h3>
-                    <h4>U6 / U7</h4>
+                    <h4>U7</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/louis-chretien__s01meh.jpg" alt="Educateur">
+                    <img src="img/nouveau_coach/Louis_U10.png" alt="Educateur">
                     <h2>Louis Chrétien</h2>
                     <h3>Educateur</h3>
-                    <h4>U6 / U7</h4>
+                    <h4>U10</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/mick-chretien__rzgu45.png" alt="Educateur">
-                    <h2>Mick Chrétien</h2>
+                    <img src="img/nouveau_coach/DominiqueLonguepee_seniors.png"  style="width: 260px;" alt="Educateur">
+                    <h2>Dominique Longuepee</h2>
                     <h3>Educateur</h3>
-                    <h4>(U11 Niveau 1 Poule D)</h4>
+                    <h4>Vétérans</h4>
                 </div>
                 <div class="les_coachs">
                     <img src="img/coachs/mickael-chretien__s01n5s.jpg" alt="Entraineur">
                     <h2>Mickael Chretien</h2>
                     <h3>Entraineur</h3>
-                    <h4>(U12 Niveau 1/2 Poule J/L)</h4>
+                    <h4>Féminins</h4>
                 </div>
                 <div class="les_coachs">
                     <img src="img/coachs/francois-collet2__s01mbx.jpg" alt="Entraineur">
                     <h2>François Collet</h2>
                     <h3>Entraineur</h3>
-                    <h4>(U15 Pré D1 Poule D)</h4>
+                    <h4>U14</h4>
                 </div>
-                <div class="les_coachs">
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/christian-decamps__s01lp7.jpg" alt="Entraineur">
                     <h2>Christian Descamps</h2>
                     <h3>Entraineur</h3>
                     <h4>(U12 Niveau 1 Poule J)</h4>
-                </div>
+                </div> -->
                 <div class="les_coachs">
-                    <img src="img/coachs/noah-depin__s01nbx.jpg" alt="Educateur">
+                    <img src="img/nouveau_coach/Noah_U9.jpg" style="width: 260px;" alt="Educateur">
                     <h2>Noah Depin</h2>
                     <h3>Educateur</h3>
-                    <h4>(U8)</h4>
+                    <h4>U9</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/mickael-dumont__s01m4s.jpg" alt="Entraineur">
-                    <h2>Mickael Dumont</h2>
+                    <img src="img/Personnel/gaetan-chretien__rxwen6.png" alt="Entraineur">
+                    <h2>Gaetan Chretien</h2>
                     <h3>Entraineur</h3>
-                    <h4>(U14 Pré D1 Poule A)</h4>
+                    <h4>U14</h4>
                 </div>
-                <div class="les_coachs">
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/vincent-duval__s0i33r.png" alt="Entraineur">
                     <h2>Vincent Duval</h2>
                     <h3>Entraineur</h3>
                     <h4>(Foot Loisirs Groupe D)</h4>
-                </div>
-                <div class="les_coachs">
+                </div> -->
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/steve-farley__s0iiyq.jpg" alt="Entraineur">
                     <h2>Steve Farley</h2>
                     <h3>Entraineur</h3>
@@ -415,50 +419,128 @@
                     <h2>Alois Godon Kowalski</h2>
                     <h3>Entraineur</h3>
                     <h4>(U13 Niveau 2 Poule C)</h4>
-                </div>
+                </div> -->
                 <div class="les_coachs">
-                    <img src="img/coachs/brayan-guilbaud__s0iiyq.jpg" alt="Entraineur">
+                    <img src="img/nouveau_coach/brayan_U16.png" alt="Entraineur">
                     <h2>Brayan Guilbaud</h2>
                     <h3>Entraineur</h3>
-                    <h4>(U15 Pré D1 Poule D)</h4>
+                    <h4>U16</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/ludovic-labbe__s1156e.jpg" alt="Entraineur Adjoint">
+                    <img src="img/coachs/ludovic-labbe__s1156e.jpg" alt="Entraineur">
                     <h2>Ludovic Labbe</h2>
-                    <h3>Entraineur Adjoint</h3>
-                    <h4>(U10 Niveau 1 Poule I)</h4>
+                    <h3>Entraineur</h3>
+                    <h4>U12</h4>
                 </div>
                 <div class="les_coachs">
+                    <img src="img/nouveau_coach/Mathis_U12.jpg" alt="Entraineur">
+                    <h2>Mathis Dumont</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U12</h4>
+                </div>
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/mathis-leleu__s1156e.jpg" alt="Entraineur Adjoint">
                     <h2>Mathis leleu</h2>
                     <h3>Entraineur Adjoint</h3>
                     <h4>(U12 Niveau 2 Poule L)</h4>
-                </div>
+                </div> -->
                 <div class="les_coachs">
-                    <img src="img/coachs/david-minet__s1156f.jpg" alt="Educateur">
+                    <img src="img/nouveau_coach/David_Baby.jpg" alt="Educateur">
                     <h2>David Minet</h2>
                     <h3>Educateur</h3>
-                    <h4>(BABY)</h4>
+                    <h4>BABY</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/maxime-minet__s1156f.jpg" alt="Educateur">
+                    <img src="img/nouveau_coach/LouisG_Baby.jpg" alt="Educateur">
+                    <h2>Louis Grevet</h2>
+                    <h3>Educateur</h3>
+                    <h4>BABY</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/Max_U6.jpg" alt="Educateur">
                     <h2>Maxime Minet</h2>
                     <h3>Educateur</h3>
-                    <h4>(BABY)</h4>
+                    <h4>U6</h4>
                 </div>
                 <div class="les_coachs">
-                    <img src="img/coachs/michael-payen__s1156f.jpg" alt="Entraineur des gardiens">
-                    <h2>Michael Payen</h2>
+                    <img src="img/nouveau_coach/Adrien_U9.jpg" alt="Entraineur">
+                    <h2>Adrien Loock</h2>
                     <h3>Entraineur</h3>
-                    <h4>Des Gardiens</h4>
+                    <h4>U9</h4>
                 </div>
                 <div class="les_coachs">
+                    <img src="img/nouveau_coach/Arnaud_U7.jpg" alt="Entraineur">
+                    <h2>Arnaud Jajak </h2>
+                    <h3>Entraineur</h3>
+                    <h4>U7</h4>
+                </div>
+                <div class="les_coachs">
+                    <div class="img_container_coach">
+                        <img src="img/nouveau_coach/Boidin_U13.png" alt="Entraineur">
+                    </div>
+                    <h2>Vincent  Boidin </h2>
+                    <h3>Entraineur</h3>
+                    <h4>U13</h4>
+                </div>
+                <div class="les_coachs">
+                    <div class="img_container_coach">
+                        <img src="img/nouveau_coach/Grevet_U13.png" alt="Entraineur">
+                    </div>
+                    <h2>Mathieu Grevet</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U13</h4>
+                </div>
+                <div class="les_coachs">
+                    <div class="img_container_coach">
+                        <img src="img/nouveau_coach/Renaud_U13.png" alt="Entraineur">
+                    </div>
+                    <h2>Renaud Goyat</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U13</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/Yves_U13.png" alt="Entraineur">
+                    <h2>Yves Godart</h2>
+                    <h3>Entraineur</h3>
+                    <h4>Séniors</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/romuald.jpg" alt="Entraineur">
+                    <h2>Romuald Felix</h2>
+                    <h3>Entraineur</h3>
+                    <h4>Séniors</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/Jeremy_Feminin.png" style="width: 260px;" alt="Entraineur">
+                    <h2>Jeremyshirley Anniere </h2>
+                    <h3>Entraineur</h3>
+                    <h4>Féminins</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/Christian_U10.png" alt="Entraineur">
+                    <h2>Christian Decamps</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U10</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/Salim_U8.jpg" alt="Entraineur">
+                    <h2>Salim Mtm</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U8</h4>
+                </div>
+                <div class="les_coachs">
+                    <img src="img/nouveau_coach/William_U8.jpg" alt="Entraineur">
+                    <h2>William Thouvenin</h2>
+                    <h3>Entraineur</h3>
+                    <h4>U8</h4>
+                </div>
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/gregory-thumerelle__s1156g.png" alt="Entraineur">
                     <h2>Gregory Thumerelle</h2>
                     <h3>Entraineur</h3>
                     <h4>(U14 D2 Poule unique)</h4>
-                </div>
-                <div class="les_coachs">
+                </div> -->
+                <!-- <div class="les_coachs">
                     <img src="img/coachs/vincent-bore__s5rzc0.jpg" alt="Entraineur">
                     <h2>Vincent Boré</h2>
                     <h3>Entraineur</h3>
@@ -470,7 +552,7 @@
                     <h3>Entraineur</h3>
                     <h4>(U18 U19 Niveau 1 Poule Unique)</h4>
                     <h4>(U13 A Pré D1 Poule A)</h4>
-                </div>
+                </div> -->
             </div>
 
         </section>
@@ -479,6 +561,8 @@
 
         <!-- Les Dirigeant -->
 
+        <!-- Lien Dirigeant :  https://templeuve.footeo.com/dirigeants.html-->
+
         <section class="dirigeant" id="dirigeantSection">
             <h1>Les Dirigeants de L'AS Templeuve</h1>
             <!-- horizontal -->
@@ -486,53 +570,24 @@
             <div class="all_dirigeant">
 
                 <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/amar-miloudi__s1156f.png)">
+                    <div class="front" style="background-image: url(img/coachs/ludovic-bonnel__s01mkf.jpg)">
                         <!-- <h1 class="text-shadow">Amar Miloudi</h1> -->
                     </div>
                     <div class="back">
-                        <h2>Amar Miloudi</h2>
+                        <h2>Ludovic Bonnel</h2>
                         <ul>
                             <li>
-                                <p>Dirigeant (U11 Niveau 1 Poule D)</p>
+                                <p>Dirigeant</p>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/bertrand-junger2__s1156e.jpg)">
-                        <!-- <h1 class="text-shadow">LAKE</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Bertrand Junger</h2>
-                        <p>Dirigeant (Seniors A Poule D)</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/bertrand-mouchon2__s1156f.jpg)">
+                    <div class="front" style="background-image: url(img/Personnel/audrey-chretien-rappasse__rxwen7.png)">
                         <!-- <h1 class="text-shadow">Bertrand</hi> -->
                     </div>
                     <div class="back">
-                        <h2>Bertrand Mouchon</h2>
-                        <p>Dirigeant (Seniors A Poule D)</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/carla-longuepee__s1156e.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Carla Longuepee</h2>
-                        <p> Dirigeant (Seniors A Poule D)
-                            Dirigeant (U18 U19 Niveau 1 Poule Unique)
-                        </p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/cedric-godon__s0iiyq.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Cédric Godon</h2>
+                        <h2>Audrey Chrétien-Rappasse</h2>
                         <p>Dirigeant</p>
                     </div>
                 </div>
@@ -542,15 +597,15 @@
                     </div>
                     <div class="back">
                         <h2>Maxime Corbanie</h2>
-                        <p>Dirigeant</p>
+                        <p> Dirigeant</p>
                     </div>
                 </div>
                 <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/melanie-morteux__s1156f.jpg)">
+                    <div class="front" style="background-image: url(img/Dirigeant/yoann-debut.png)">
                         <!-- <h1 class="text-shadow">Bertrand</hi> -->
                     </div>
                     <div class="back">
-                        <h2>Mélanie Morteux</h2>
+                        <h2>Yoann Debut</h2>
                         <p>Dirigeant</p>
                     </div>
                 </div>
@@ -560,196 +615,6 @@
                     </div>
                     <div class="back">
                         <h2>Olivier Desmons</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/olivier-luczak__s1156f.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Olivier Luczak</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/pascal-havet__s0iiyq.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Pascal Havet</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/patrick-drabik__rxwen8.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Patrick Drabik</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/Romain_marcelli__s1156f.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Romain Marcelli</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/romuald-felix__s0iiyq.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Romuald Felix</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/sebastien-lisik__s1156e.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Sebastien Lisik</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip">
-                    <div class="front" style="background-image: url(img/Dirigeant/vincent-boidin__rjbhet.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Vincent Boidin</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/cedric-havet__s0iiyq.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Cédric Havet</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/christian-goyat__s0iiyq.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Christian Goyat</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front"
-                        style="background-image: url(img/Dirigeant/christophe-saint-raymond__s1156g.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Christophe Saint Raymond</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/christophe-thouvenin__s1156g.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Christophe Thouvenin</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/cyril-evrard__s0iiyq.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Cyril Evrard</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/dominique-longuepee__s1156e.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Dominique Longuepee</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/emmanuel-mullier__s1156f.jpg)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Emmanuel Mullier</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/fabien-vandenabeelle__s1156g.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Fabien Vandenabeelle</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/frederic-duquesnoy__rzgu9q.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Frederic Duquesnoy</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/gauthier-catteau__rxwen6.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Gauthier Catteau</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/gregory-hus__s1156e.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Gregory Hus</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/gregory-thumerelle__s1156g.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Gregory Thumerelle</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/guillaume-planques__s1156f.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Guillaume Planques</h2>
-                        <p>Dirigeant</p>
-                    </div>
-                </div>
-                <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/helene-roger__s1156g.png)">
-                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
-                    </div>
-                    <div class="back">
-                        <h2>Hélène Roger</h2>
                         <p>Dirigeant</p>
                     </div>
                 </div>
@@ -763,11 +628,101 @@
                     </div>
                 </div>
                 <div class="flip flip-vertical">
-                    <div class="front" style="background-image: url(img/Dirigeant/laure-ducoulombier__s1djo0.png)">
+                    <div class="front" style="background-image: url(img/Dirigeant/cyril-evrard__s0iiyq.jpg)">
                         <!-- <h1 class="text-shadow">Bertrand</hi> -->
                     </div>
                     <div class="back">
-                        <h2>Laure Ducoulombier</h2>
+                        <h2>Cyril Evrard</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/romuald-felix__s0iiyq.jpg)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Romuald Felix</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/johan-gaillet_.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Johan Gaillet</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip flip-vertical">
+                    <div class="front" style="background-image: url(img/Dirigeant/christian-goyat__s0iiyq.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Christian Goyat</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/sebastien-lisik__s1156e.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Sebastien Lisik</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/fabienne-minet.jpg)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Fabienne Minet</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/melanie-morteux__s1156f.jpg)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Mélanie Morteux</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip flip-vertical">
+                    <div class="front" style="background-image: url(img/Dirigeant/emmanuel-mullier__s1156f.jpg)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Emmanuel Mullier</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip flip-vertical">
+                    <div class="front" style="background-image: url(img/Dirigeant/helene-roger__s1156g.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Hélène Roger</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip flip-vertical">
+                    <div class="front" style="background-image: url(img/Dirigeant/fabien-vandenabeelle__s1156g.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Fabien Vandenabeelle</h2>
+                        <p>Dirigeant</p>
+                    </div>
+                </div>
+                <div class="flip">
+                    <div class="front" style="background-image: url(img/Dirigeant/paul-wallyn_.png)">
+                        <!-- <h1 class="text-shadow">Bertrand</hi> -->
+                    </div>
+                    <div class="back">
+                        <h2>Paul Wallyn</h2>
                         <p>Dirigeant</p>
                     </div>
                 </div>
@@ -775,6 +730,19 @@
         </section>
 
 
+        <!-- Les entrainements -->
+        <section class="calendrier" id="calendrierSection">
+            <h1>Planning des entraînements pour l'année 2024 / 2025</h1>
+            <div class="newsContainer">
+                <img id="imageToEnlarge" src="./img/Infrastructure_club/calendrier_entrainement.jpg"
+                    alt="Calendrier entrainement">
+            </div>
+
+            <div id="fullscreenContainer">
+                <img id="fullscreenImage" src="" alt="Image en plein écran">
+                <button onclick="closeFullscreen()">✖</button>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -787,21 +755,9 @@
                         <span class="tooltip">Facebook</span>
                         <span class="logo_social"><i class="fab fa-facebook-f"></i></span>
                     </li>
-                    <li class="icon twitter" id="twitterIcon">
-                        <span class="tooltip">Twitter</span>
-                        <span class="logo_social"><i class="fab fa-twitter"></i></span>
-                    </li>
                     <li class="icon instagram" id="instagramIcon">
                         <span class="tooltip">Instagram</span>
                         <span class="logo_social"><i class="fab fa-instagram"></i></span>
-                    </li>
-                    <li class="icon tiktok" id="tiktokIcon">
-                        <span class="tooltip">Tik Tok</span>
-                        <span class="logo_social"><i class="fab fa-tiktok"></i></span>
-                    </li>
-                    <li class="icon youtube" id="youtubeIcon">
-                        <span class="tooltip">Youtube</span>
-                        <span class="logo_social"><i class="fab fa-youtube"></i></span>
                     </li>
                 </ul>
             </div>

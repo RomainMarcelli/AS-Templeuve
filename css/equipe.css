@@ -236,7 +236,15 @@ main .title {
   width: 51px !important;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1260px) {
+  .grid {
+    grid-template-columns: repeat(3, 300px);
+    /* Ou toute autre configuration pour les écrans plus petits */
+  }
+}
+
+@media (max-width: 935px) {
   .grid {
     grid-template-columns: repeat(2, 300px);
     /* Ou toute autre configuration pour les écrans plus petits */
@@ -244,7 +252,7 @@ main .title {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 635px) {
   .grid {
     grid-template-columns: 300px;
     /* Une seule colonne pour les écrans très petits */

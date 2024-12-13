@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une actualité</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            padding: 8px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .news {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .date {
+            font-size: 0.9em;
+            color: #999;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Créer une actualité</h1>
+    <form id="newsForm">
+        <div class="form-group">
+            <label for="title">Titre de l'actualité</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <h2>Actualités</h2>
+    <div id="newsContainer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsContainer = document.getElementById('newsContainer');
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+
+            renderNews();
+
+            document.getElementById('newsForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const title = document.getElementById('title').value;
+                const description = document.getElementById('description').value;
+                const imageInput = document.getElementById('image');
+                const imageFile = imageInput.files[0];
+                const reader = new FileReader();
+                const date = new Date().toLocaleDateString('fr-FR');
+
+                reader.onload = function(e) {
+                    const imageUrl = e.target.result;
+                    const news = {
+                        title: title,
+                        description: description,
+                        imageUrl: imageUrl,
+                        date: date
+                    };
+
+                    newsList.push(news);
+                    localStorage.setItem('newsList', JSON.stringify(newsList));
+
+                    alert('Actualité créée avec succès !');
+                    document.getElementById('newsForm').reset();
+                    renderNews();
+                };
+
+                reader.readAsDataURL(imageFile);
+            });
+
+            function renderNews() {
+                newsContainer.innerHTML = '';
+                if (newsList.length === 0) {
+                    newsContainer.innerHTML = '<p>Aucune actualité disponible.</p>';
+                } else {
+                    newsList.forEach((news, index) => {
+                        const newsElement = document.createElement('div');
+                        newsElement.className = 'news';
+
+                        newsElement.innerHTML = `
+                            <h2>${news.title}</h2>
+                            <p class="date">Publié le : ${news.date}</p>
+                            <p>${news.description}</p>
+                            <img src="${news.imageUrl}" alt="Image de l'actualité">
+                            <button class="delete-btn" data-index="${index}">Supprimer</button>
+                        `;
+
+                        newsElement.querySelector('.delete-btn').addEventListener('click', function() {
+                            const indexToRemove = this.getAttribute('data-index');
+                            newsList.splice(indexToRemove, 1);
+                            localStorage.setItem('newsList', JSON.stringify(newsList));
+                            renderNews();
+                        });
+
+                        newsContainer.appendChild(newsElement);
+                    });
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

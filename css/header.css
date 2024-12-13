@@ -96,6 +96,10 @@ header .menu_contact li:hover {
     background-position: 0;
 }
 
+header .logo_mobile {
+    display: none;
+}
+
 header ul li a {
     display: flex;
     text-decoration: none;
